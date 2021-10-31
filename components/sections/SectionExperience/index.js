@@ -5,7 +5,7 @@ import proExperiences from "@/data/professional-experience.json";
 import styles from "./styles.module.scss";
 
 const SectionExperience = ({}) => (
-  <section className="bg-purple-dark">
+  <section className="bg-purple-dark pb-20">
     <h1 className="text-white-default text-6xl text-center pt-20">
       Experience
     </h1>
