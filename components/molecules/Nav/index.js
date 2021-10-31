@@ -11,7 +11,7 @@ const links = [
   { text: "Repos/Gists", href: "/repos" },
 ];
 
-const FloatingNav = ({}) => {
+const Nav = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
   const { maskHook } = useGlobalContext();
   const [, setMaskIsOpen] = maskHook;
@@ -46,4 +46,4 @@ const FloatingNav = ({}) => {
   );
 };
 
-export default FloatingNav;
+export default Nav;
