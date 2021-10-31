@@ -20,7 +20,7 @@ const SectionExperience = ({}) => (
     </p>
     <div className="max-w-4xl mx-auto">
       {proExperiences.map((e) => (
-        <PortfolioItem data={e} className="my-20" />
+        <PortfolioItem data={e} className="py-10" />
       ))}
     </div>
   </section>
