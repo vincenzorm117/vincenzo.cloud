@@ -20,6 +20,7 @@ module.exports = {
       },
       black: {
         default: "#000",
+        chrome: "#686b6d",
       },
       green: {
         grey: "#5d805e",
@@ -27,6 +28,9 @@ module.exports = {
       gray: {
         darkest: "#1c1c1c",
         dark: "#474747",
+        light: "#f0f0f0",
+        a3: "#a3a3a3",
+        e2: "#e2e2e2",
       },
       purple: {
         dark: "#242634",
@@ -40,6 +44,7 @@ module.exports = {
       },
       cyan: {
         default: "#00ceff",
+        dark: "#06aed5",
       },
       red: {
         pink: "#eb606b",
