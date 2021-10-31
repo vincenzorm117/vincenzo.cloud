@@ -10,19 +10,25 @@ module.exports = {
       display: ["'Gilroy Light'", "Helvetica", "sans-serif"],
     },
     colors: {
+      transparent: "transparent",
       white: {
         default: "#fff",
         dark: "#eee",
         darker: "#e3e3e3",
+        b2: "#b2b2b2",
         ce: "#cecece",
       },
       black: {
         default: "#000",
       },
+      green: {
+        grey: "#5d805e",
+      },
       gray: {
         darkest: "#1c1c1c",
       },
       purple: {
+        dark: "#242634",
         darkest: "#1d1e29",
       },
       brown: {
@@ -30,6 +36,9 @@ module.exports = {
       },
       cyan: {
         default: "#00ceff",
+      },
+      red: {
+        pink: "#eb606b",
       },
     },
   },
