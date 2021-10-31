@@ -1,0 +1,19 @@
+@mixin colorMixerSpec($color, $name, $res, $property) {
+  $colorHue: hue($color);
+  $colorSaturation: saturation($color);
+  $colorLightness: lightness($color);
+  @if $colorHue <= ($res/2) {
+    $colorHue: 360 + $colorHue - ($res/2);
+  }
+  @keyframes #{$name} {
+    @for $i from 1 through $res {
+      $colorHue: $colorHue + $i;
+      @if not($colorHue < 360) {
+        $colorHue: 0;
+      }
+      #{$i*100/$res}% {
+        #{$property}: hsl($colorHue, $colorSaturation, $colorLightness);
+      }
+    }
+  }
+}
