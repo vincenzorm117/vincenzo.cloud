@@ -11,10 +11,13 @@ const SectionExperience = ({}) => (
     </h1>
     <p className="text-center pb-14 text-white-default">
       <span className="text-[20px]">Resume:</span>
-      <a className={cn(styles.link, "mx-[24px]")}>
+      <a
+        className={cn(styles.link, "mx-[24px]")}
+        href="/resume/VincenzoMarconi-Resume.pdf"
+      >
         <IconLink className="inline-block fill-current" /> PDF
       </a>
-      <a className={styles.link}>
+      <a className={styles.link} href="/resume/VincenzoMarconi-Resume.docx">
         <IconLink className="inline-block fill-current" /> DocX
       </a>
     </p>
