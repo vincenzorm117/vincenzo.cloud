@@ -2,10 +2,16 @@ import "../styles/globals.scss";
 import "tailwindcss/tailwind.css";
 import Head from "next/head";
 import SectionFooter from "components/sections/SectionFooter";
+import Nav from "components/molecules/Nav";
+import GlobalProvider from "../providers/GlobalProvider";
+import Mask from "components/atoms/Mask";
+import { useState } from "react";
 
 export default function MyApp({ Component, pageProps }) {
+  const maskHook = useState(false);
+
   return (
-    <>
+    <GlobalProvider.Provider value={{ maskHook }}>
       <Head>
         <meta charSet="utf-8" />
         <meta name="description" content="Vincenzo Marconi's Personal Site" />
@@ -38,8 +44,10 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       <main>
         <Component {...pageProps} />
+        <Nav />
       </main>
       <SectionFooter />
-    </>
+      <Mask />
+    </GlobalProvider.Provider>
   );
 }
