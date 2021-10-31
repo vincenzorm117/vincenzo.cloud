@@ -41,6 +41,10 @@ export default function MyApp({ Component, pageProps }) {
         />
         <meta name="msapplication-TileColor" content="#eeeeee" />
         <meta name="theme-color" content="#ffffff" />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,700"
+          rel="stylesheet"
+        />
       </Head>
       <main>
         <Component {...pageProps} />
