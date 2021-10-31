@@ -26,6 +26,7 @@ module.exports = {
       },
       gray: {
         darkest: "#1c1c1c",
+        dark: "#474747",
       },
       purple: {
         dark: "#242634",
@@ -33,6 +34,9 @@ module.exports = {
       },
       brown: {
         darkest: "#93928d",
+      },
+      gold: {
+        dark: "#b6995e",
       },
       cyan: {
         default: "#00ceff",
