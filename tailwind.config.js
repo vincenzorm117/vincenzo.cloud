@@ -1,4 +1,5 @@
 module.exports = {
+  mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -13,6 +14,10 @@ module.exports = {
         default: "#fff",
         dark: "#eee",
         darker: "#e3e3e3",
+        ce: "#cecece",
+      },
+      black: {
+        default: "#000",
       },
       gray: {
         darkest: "#1c1c1c",
@@ -22,6 +27,9 @@ module.exports = {
       },
       brown: {
         darkest: "#93928d",
+      },
+      cyan: {
+        default: "#00ceff",
       },
     },
   },
