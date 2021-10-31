@@ -29,7 +29,7 @@ const SectionGists = ({}) => {
 
   return (
     <section>
-      <h2 className="text-cyan-dark text-6xl text-center pt-20">Gists</h2>
+      <h2 className="text-cyan-dark text-5xl text-center pt-20">Gists</h2>
       <ul className="max-w-4xl mx-auto my-20 rounded-lg bg-gray-light">
         {gists.map((gist, index) => (
           <li

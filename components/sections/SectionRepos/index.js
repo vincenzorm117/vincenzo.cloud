@@ -23,7 +23,7 @@ const SectionRepos = ({}) => {
 
   return (
     <section>
-      <h2 className="text-cyan-dark text-6xl text-center pt-20">Repos</h2>
+      <h2 className="text-cyan-dark text-5xl text-center pt-20">Repos</h2>
       <ul className="max-w-4xl mx-auto my-20 rounded-lg bg-gray-light">
         {repos.map((repo, index) => (
           <li
