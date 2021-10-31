@@ -65,7 +65,7 @@ const SocialLinks = ({}) => (
         x="0px"
         y="0px"
         viewBox="0 0 430.117 430.117"
-        style={{ "enable-background": "new 0 0 430.117 430.117" }}
+        style={{ enableBackground: "new 0 0 430.117 430.117" }}
         xmlSpace="preserve"
       >
         {" "}
