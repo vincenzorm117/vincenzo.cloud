@@ -1,19 +1,11 @@
-import Image from "next/image";
-import imgProfile from "@/img/profile.jpg";
-
 const SectionIntro = ({}) => (
   <section className="bg-gray-darkest text-white-dark">
     <div className="flex flex-nowrap flex-row justify-center mx-auto container py-28">
       <div className="w-4/12">
-        <div className="rounded-full overflow-hidden border-white-darker border-4 border-solid w-8/12 mx-auto">
-          <Image
-            src={imgProfile}
-            width={250}
-            height={250}
-            layout="responsive"
-            placeholder="blur"
-          />
-        </div>
+        <img
+          src="/img/profile.jpg"
+          className="rounded-full overflow-hidden border-white-darker border-4 border-solid w-8/12 mx-auto"
+        />
       </div>
       <div className="flex flex-col justify-center w-8/12">
         <h2 className="text-4xl">Hello World!</h2>
