@@ -53,9 +53,9 @@ const BlinkingGrid = ({ children = null }) => {
         } else {
           ctx.globalAlpha = 0.2;
         }
-        // ctx.globalAlpha = 0.2;
         ctx.beginPath();
-        ctx.arc(x * space, y * space, 1, 0, constant_2pi, false);
+        // ctx.arc(x * space, y * space, 1, 0, constant_2pi, false);
+        ctx.rect(x * space, y * space, 1, 1);
         ctx.fillStyle = "#fff";
         ctx.fill();
       }
