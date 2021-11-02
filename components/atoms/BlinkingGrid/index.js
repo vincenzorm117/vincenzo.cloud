@@ -20,7 +20,6 @@ const BlinkingGrid = ({ children = null }) => {
     const { blinkingNodes, canvasDimensions, gridInfo } = args;
     const { clientWidth, clientHeight } = ctx.canvas;
     const { width, height } = canvasDimensions.current;
-    const { xCount, yCount } = gridInfo.current;
     const space = 40 + 1;
 
     if (clientWidth !== width || clientHeight !== height) {
@@ -37,31 +36,50 @@ const BlinkingGrid = ({ children = null }) => {
       gridInfo.current.xCount = xCount;
       gridInfo.current.yCount = yCount;
       gridInfo.current.nodeCount = xCount * yCount;
-    }
 
-    // Draw background
-    ctx.clearRect(0, 0, clientWidth, clientHeight);
+      // Draw background
+      ctx.clearRect(0, 0, clientWidth, clientHeight);
 
-    // Draw each node
-    const constant_2pi = 2 * Math.PI;
-
-    for (let x = 0; x < xCount; x++) {
-      for (let y = 0; y < yCount; y++) {
-        let index = x * yCount + y;
-        if (blinkingNodes.current.hasOwnProperty(index)) {
-          ctx.globalAlpha = blinkingNodes.current[index].alpha;
-        } else {
-          ctx.globalAlpha = 0.2;
+      // Draw each node
+      for (let x = 0; x < xCount; x++) {
+        for (let y = 0; y < yCount; y++) {
+          let index = x * yCount + y;
+          if (blinkingNodes.current.hasOwnProperty(index)) {
+            ctx.globalAlpha = blinkingNodes.current[index].alpha;
+          } else {
+            ctx.globalAlpha = 0.2;
+          }
+          ctx.beginPath();
+          ctx.rect(x * space, y * space, 1, 1);
+          ctx.fillStyle = "#fff";
+          ctx.fill();
         }
+      }
+
+      ctx.globalAlpha = 1;
+    } else {
+      // Draw background
+
+      // Draw each node
+      for (let i in blinkingNodes.current) {
+        const blinkingNode = blinkingNodes.current[i];
+
+        if (blinkingNode.isDoneBlinking) {
+          ctx.globalAlpha = 0.2;
+          delete blinkingNodes.current[i];
+        } else {
+          ctx.globalAlpha = blinkingNode.alpha;
+        }
+        const x = blinkingNode.x * space;
+        const y = blinkingNode.y * space;
+
         ctx.beginPath();
-        // ctx.arc(x * space, y * space, 1, 0, constant_2pi, false);
-        ctx.rect(x * space, y * space, 1, 1);
+        ctx.clearRect(x, y, 1, 1);
+        ctx.rect(x, y, 1, 1);
         ctx.fillStyle = "#fff";
         ctx.fill();
       }
     }
-
-    ctx.globalAlpha = 1;
   };
 
   const updateBlinkingNodes = (ctx, args) => {
@@ -69,18 +87,18 @@ const BlinkingGrid = ({ children = null }) => {
 
     // Update currently active blinking dots
     for (const node of Object.values(blinkingNodes.current)) {
+      // Calculate alpha value for node
       var t = (Date.now() - node.blinkStartTime.getTime()) / 1000;
       var alpha =
         (2 * 0.6) /
           (Math.pow(Math.E, 3 * (t - 2)) + Math.pow(Math.E, 3 * (2 - t))) +
         0.2;
 
+      // Set node alpha for drawing
       node.alpha = clamp(alpha, 0.2, 0.8);
 
-      // Remove from list if done blinking
-      if (6.0 < t) {
-        delete blinkingNodes.current[node.index];
-      }
+      // Mark node for deletion
+      blinkingNodes.current[node.index].isDoneBlinking = 6.0 < t;
     }
 
     // Add new blinking dots
@@ -92,6 +110,9 @@ const BlinkingGrid = ({ children = null }) => {
         index,
         blinkStartTime: new Date(),
         alpha: 0.2,
+        isDoneBlinking: false,
+        x: Math.floor(index / gridInfo.current.yCount),
+        y: index % gridInfo.current.yCount,
       };
     }
   };
