@@ -45,12 +45,11 @@ const BlinkingGrid = ({ children = null }) => {
     // Draw each node
     const constant_2pi = 2 * Math.PI;
 
-    let i = 0;
     for (let x = 0; x < xCount; x++) {
       for (let y = 0; y < yCount; y++) {
-        if (blinkingNodes.current.hasOwnProperty(i)) {
-          console.log(i, blinkingNodes.current[i].alpha);
-          ctx.globalAlpha = blinkingNodes.current[i].alpha;
+        let index = x * yCount + y;
+        if (blinkingNodes.current.hasOwnProperty(index)) {
+          ctx.globalAlpha = blinkingNodes.current[index].alpha;
         } else {
           ctx.globalAlpha = 0.2;
         }
@@ -59,7 +58,6 @@ const BlinkingGrid = ({ children = null }) => {
         ctx.arc(x * space, y * space, 1, 0, constant_2pi, false);
         ctx.fillStyle = "#fff";
         ctx.fill();
-        i += 0;
       }
     }
 
@@ -86,7 +84,7 @@ const BlinkingGrid = ({ children = null }) => {
     }
 
     // Add new blinking dots
-    if (flipcoin(0.1)) {
+    if (flipcoin(0.2)) {
       // Generate x and y coordinates for next blinking dot
       const index = getUnusedIndex(args);
       // const index = 750;
