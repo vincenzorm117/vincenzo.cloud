@@ -31,7 +31,12 @@ const Nav = ({}) => {
   }, [router, toggleNav]);
 
   return (
-    <nav className={cn("fixed z-20 bottom-0 right-0 pb-[25px] pr-[25px]")}>
+    <nav
+      onMouseLeave={() => toggleNav(false)}
+      className={cn(
+        "fixed z-20 bottom-0 right-0 pb-[25px] pr-[25px] h-[400px] w-[300px] flex flex-col justify-end"
+      )}
+    >
       <ul
         className={cn(
           "text-right pb-5 transition-opacity",
