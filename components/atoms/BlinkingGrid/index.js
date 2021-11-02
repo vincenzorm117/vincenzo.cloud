@@ -5,14 +5,23 @@ import flipcoin from "helpers/flipcoin";
 const BlinkingGrid = ({ children = null }) => {
   const canvasRef = useRef(null);
   const canvasDimensions = useRef({ width: 0, height: 0 });
-
-  const nodes = useRef([]);
+  const gridInfo = useRef({ xCount: 0, yCount: 0, nodeCount: 0 });
   const blinkingNodes = useRef({});
 
+  const getUnusedIndex = ({ blinkingNodes, gridInfo }) => {
+    let index;
+    do {
+      index = Math.floor(Math.random() * gridInfo.current.nodeCount);
+    } while (blinkingNodes.current.hasOwnProperty(index));
+    return index;
+  };
+
   const draw = (ctx, args) => {
-    const { nodes, blinkingNodes, canvasDimensions } = args;
+    const { blinkingNodes, canvasDimensions, gridInfo } = args;
     const { clientWidth, clientHeight } = ctx.canvas;
-    const { width, height } = canvasDimensions;
+    const { width, height } = canvasDimensions.current;
+    const { xCount, yCount } = gridInfo.current;
+    const space = 40 + 1;
 
     if (clientWidth !== width || clientHeight !== height) {
       // Update dimensions
@@ -21,8 +30,13 @@ const BlinkingGrid = ({ children = null }) => {
       ctx.canvas.setAttribute("width", clientWidth);
       ctx.canvas.setAttribute("height", clientHeight);
 
-      // Refresh nodes
-      refreshNodes(args);
+      // Update grid settings
+      const xCount = Math.ceil(clientWidth / space);
+      const yCount = Math.ceil(clientHeight / space);
+
+      gridInfo.current.xCount = xCount;
+      gridInfo.current.yCount = yCount;
+      gridInfo.current.nodeCount = xCount * yCount;
     }
 
     // Draw background
@@ -30,56 +44,26 @@ const BlinkingGrid = ({ children = null }) => {
 
     // Draw each node
     const constant_2pi = 2 * Math.PI;
-    for (let i = 0; i < nodes.current.length; i++) {
-      const node = nodes.current[i];
-      if (blinkingNodes.current.hasOwnProperty(i)) {
-        ctx.globalAlpha = blinkingNodes.current[i].alpha;
-      } else {
-        ctx.globalAlpha = 0.2;
+
+    let i = 0;
+    for (let x = 0; x < xCount; x++) {
+      for (let y = 0; y < yCount; y++) {
+        if (blinkingNodes.current.hasOwnProperty(i)) {
+          console.log(i, blinkingNodes.current[i].alpha);
+          ctx.globalAlpha = blinkingNodes.current[i].alpha;
+        } else {
+          ctx.globalAlpha = 0.2;
+        }
+        // ctx.globalAlpha = 0.2;
+        ctx.beginPath();
+        ctx.arc(x * space, y * space, 1, 0, constant_2pi, false);
+        ctx.fillStyle = "#fff";
+        ctx.fill();
+        i += 0;
       }
-      ctx.beginPath();
-      ctx.arc(node.x, node.y, 1, 0, constant_2pi, false);
-      ctx.fillStyle = "#fff";
-      ctx.fill();
     }
-    for (let node of nodes.current) {
-      ctx.globalAlpha = 0.2;
-      ctx.beginPath();
-      ctx.arc(node.x, node.y, 1, 0, constant_2pi, false);
-      ctx.fillStyle = "#fff";
-      ctx.fill();
-    }
+
     ctx.globalAlpha = 1;
-  };
-
-  const refreshNodes = (args) => {
-    const { canvasDimensions, nodes } = args;
-    // Get grid settings
-    const space = 40 + 1;
-    const xCount = Math.ceil(canvasDimensions.current.width / space);
-    const yCount = Math.ceil(canvasDimensions.current.height / space);
-
-    // Set nodes
-    nodes.current = [];
-    let index = 0;
-    for (let i = 0; i < xCount; i++) {
-      for (let j = 0; j < yCount; j++) {
-        nodes.current.push({
-          x: i * space,
-          y: j * space,
-          index,
-        });
-        index += 1;
-      }
-    }
-  };
-
-  const getUnusedIndex = ({ nodes, blinkingNodes }) => {
-    let index;
-    do {
-      index = Math.floor(Math.random() * nodes.current.length);
-    } while (blinkingNodes.current.hasOwnProperty(index));
-    return index;
   };
 
   const updateBlinkingNodes = (ctx, args) => {
@@ -87,7 +71,7 @@ const BlinkingGrid = ({ children = null }) => {
 
     // Update currently active blinking dots
     for (const node of Object.values(blinkingNodes.current)) {
-      var t = (Date.now() - node.blinkStartTime.getTime()) / 1700;
+      var t = (Date.now() - node.blinkStartTime.getTime()) / 1000;
       var alpha =
         (2 * 0.6) /
           (Math.pow(Math.E, 3 * (t - 2)) + Math.pow(Math.E, 3 * (2 - t))) +
@@ -96,7 +80,7 @@ const BlinkingGrid = ({ children = null }) => {
       node.alpha = clamp(alpha, 0.2, 0.8);
 
       // Remove from list if done blinking
-      if (3.0 < t) {
+      if (6.0 < t) {
         delete blinkingNodes.current[node.index];
       }
     }
@@ -119,9 +103,9 @@ const BlinkingGrid = ({ children = null }) => {
     const context = canvas.getContext("2d");
     let animationFrameId;
     const args = {
-      nodes: nodes,
-      blinkingNodes: blinkingNodes,
-      canvasDimensions: canvasDimensions,
+      blinkingNodes,
+      canvasDimensions,
+      gridInfo,
     };
 
     const render = () => {
@@ -137,9 +121,9 @@ const BlinkingGrid = ({ children = null }) => {
   }, [
     canvasRef.current,
     draw,
-    nodes.current,
     blinkingNodes.current,
     canvasDimensions.current,
+    gridInfo.current,
   ]);
 
   return (
