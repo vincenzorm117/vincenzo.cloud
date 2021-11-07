@@ -2,6 +2,10 @@ import { useEffect, useRef } from "react";
 import { clamp } from "lodash";
 import flipcoin from "helpers/flipcoin";
 
+
+const GRID_DOT_DIAMETER = 2;
+const GRID_GUTTER = 40;
+
 const BlinkingGrid = ({ children = null }) => {
   const canvasRef = useRef(null);
   const canvasDimensions = useRef({ width: 0, height: 0 });
@@ -20,7 +24,7 @@ const BlinkingGrid = ({ children = null }) => {
     const { blinkingNodes, canvasDimensions, gridInfo } = args;
     const { clientWidth, clientHeight } = ctx.canvas;
     const { width, height } = canvasDimensions.current;
-    const space = 40 + 1;
+    const space = GRID_GUTTER + GRID_DOT_DIAMETER;
 
     if (clientWidth !== width || clientHeight !== height) {
       // Update dimensions
@@ -50,7 +54,7 @@ const BlinkingGrid = ({ children = null }) => {
             ctx.globalAlpha = 0.2;
           }
           ctx.beginPath();
-          ctx.rect(x * space, y * space, 1, 1);
+          ctx.rect(x * space, y * space, GRID_DOT_DIAMETER, GRID_DOT_DIAMETER);
           ctx.fillStyle = "#fff";
           ctx.fill();
         }
@@ -74,8 +78,8 @@ const BlinkingGrid = ({ children = null }) => {
         const y = blinkingNode.y * space;
 
         ctx.beginPath();
-        ctx.clearRect(x, y, 1, 1);
-        ctx.rect(x, y, 1, 1);
+        ctx.clearRect(x, y, GRID_DOT_DIAMETER, GRID_DOT_DIAMETER);
+        ctx.rect(x, y, GRID_DOT_DIAMETER, GRID_DOT_DIAMETER);
         ctx.fillStyle = "#fff";
         ctx.fill();
       }
