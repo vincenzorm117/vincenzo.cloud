@@ -19,6 +19,6 @@ jobs:
     steps:
       - name: Deploy static site to S3 bucket
         run: |
+          printenv
           TAG_NAME=${GITHUB_REF#refs/heads/}
           echo $TAG_NAME
-        working-directory: ./site
