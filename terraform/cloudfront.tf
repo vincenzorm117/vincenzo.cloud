@@ -16,11 +16,12 @@ resource "aws_cloudfront_distribution" "site" {
 
   enabled             = true
   default_root_object = "index.html"
+  price_class = "PriceClass_100"
 
   custom_error_response {
-    error_code            = "404"
-    error_caching_min_ttl = "300"
-    response_code         = "200"
+    error_code            = 404
+    error_caching_min_ttl = 300
+    response_code         = 200
     response_page_path    = "/index.html"
   }
 
@@ -28,7 +29,6 @@ resource "aws_cloudfront_distribution" "site" {
     var.domain
   ]
 
-  price_class = "PriceClass_100"
 
   default_cache_behavior {
     target_origin_id = "origin--${local.project_name}"
@@ -37,7 +37,7 @@ resource "aws_cloudfront_distribution" "site" {
     compress         = true
 
     forwarded_values {
-      query_string = true
+      query_string = false
       cookies {
         forward = "none"
       }
@@ -48,11 +48,10 @@ resource "aws_cloudfront_distribution" "site" {
     default_ttl            = 86400
     max_ttl                = 31536000
 
-    # lambda_function_association {
-    #   event_type   = "origin-request" #viewer-request, origin-request, viewer-response, origin-response
-    #   lambda_arn   = aws_lambda_function.edge.qualified_arn
-    #   include_body = true
-    # }
+    lambda_function_association {
+      event_type   = "origin-request"
+      lambda_arn   = aws_lambda_function.edge.qualified_arn
+    }
   }
 
   restrictions {
