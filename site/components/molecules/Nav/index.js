@@ -55,6 +55,7 @@ const Nav = ({}) => {
         ))}
       </ul>
       <button
+        aria-label="Nav menu"
         onClick={() => toggleNav(!isOpen)}
         className="block ml-auto rounded-full bg-cyan-default shadow-md hover:shadow-lg transition-shadow duration-200 relative h-[50px] w-[50px]"
       >
