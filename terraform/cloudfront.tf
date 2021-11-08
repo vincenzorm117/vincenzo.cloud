@@ -15,7 +15,6 @@ resource "aws_cloudfront_distribution" "site" {
   }
 
   enabled             = true
-  default_root_object = "index.html"
   price_class = "PriceClass_100"
 
   custom_error_response {
