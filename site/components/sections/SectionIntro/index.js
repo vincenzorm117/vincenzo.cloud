@@ -4,6 +4,7 @@ const SectionIntro = ({}) => (
       <div className="w-4/12">
         <img
           src="/img/profile.jpg"
+          alt="Profile Picture"
           className="rounded-full overflow-hidden border-white-darker border-4 border-solid w-8/12 mx-auto"
         />
       </div>

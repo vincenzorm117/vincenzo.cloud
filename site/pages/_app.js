@@ -16,6 +16,7 @@ export default function MyApp({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <meta name="description" content="Vincenzo Marconi's Personal Site" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Vincenzo</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
