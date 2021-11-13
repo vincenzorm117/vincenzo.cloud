@@ -17,6 +17,7 @@
     "styled-components": "^5.3.3"
   },
   "devDependencies": {
+    "@notionhq/client": "^0.4.6",
     "autoprefixer": "^10.3.7",
     "postcss": "^8.3.11",
     "prettier": "^2.4.1",
