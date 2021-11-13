@@ -1,4 +1,4 @@
-@import "../../../styles/mixins.scss";
+@import '../../../styles/mixins.scss';
 
 @include colorMixerSpec(hsl(249, 18%, 49%), fun-color, 20, color);
 

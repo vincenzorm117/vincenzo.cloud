@@ -1,6 +1,6 @@
-import SectionHomeHero from "@/components/sections/SectionHomeHero";
-import SectionSocial from "components/sections/SectionSocial";
-import SectionIntro from "../components/sections/SectionIntro";
+import SectionHomeHero from '@/components/sections/SectionHomeHero'
+import SectionSocial from 'components/sections/SectionSocial'
+import SectionIntro from '../components/sections/SectionIntro'
 
 export default function Home() {
   return (
@@ -9,5 +9,5 @@ export default function Home() {
       <SectionSocial />
       <SectionIntro />
     </>
-  );
+  )
 }

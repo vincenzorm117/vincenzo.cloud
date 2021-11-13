@@ -1,7 +1,7 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext } from 'react'
 
-const globalContext = createContext(null);
+const globalContext = createContext(null)
 
-export default globalContext;
+export default globalContext
 
-export const useGlobalContext = () => useContext(globalContext);
+export const useGlobalContext = () => useContext(globalContext)

@@ -1,5 +1,5 @@
-import SectionGists from "@/components/sections/SectionGists";
-import SectionRepos from "@/components/sections/SectionRepos";
+import SectionGists from '@/components/sections/SectionGists'
+import SectionRepos from '@/components/sections/SectionRepos'
 
 export default function Page() {
   return (
@@ -7,5 +7,5 @@ export default function Page() {
       <SectionRepos />
       <SectionGists />
     </>
-  );
+  )
 }
