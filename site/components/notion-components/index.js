@@ -8,7 +8,8 @@ import {
   NOTION_TYPE_HEADING_2,
   NOTION_TYPE_HEADING_3,
   NOTION_TYPE_NUMBERED_LIST,
-  NOTION_TYPE_PARAGRAPH
+  NOTION_TYPE_PARAGRAPH,
+  NOTION_TYPE_TO_DO
 } from 'utils/notion'
 import NotionBulletedList from './NotionBulletedList'
 import NotionCode from './NotionCode'
@@ -16,6 +17,7 @@ import NotionDivider from './NotionDivider'
 import NotionHeading from './NotionHeading'
 import NotionNumberedList from './NotionNumberedList'
 import NotionParagraph from './NotionParagraph'
+import NotionToDo from './NotionToDo'
 
 const NotionComponent = ({ block }) => {
   switch (block.type) {
@@ -31,6 +33,8 @@ const NotionComponent = ({ block }) => {
     case NOTION_TYPE_HEADING_2:
     case NOTION_TYPE_HEADING_3:
       return NotionHeading(block)
+    case NOTION_TYPE_TO_DO:
+      return NotionToDo(block)
     case NOTION_TYPE_CODE:
       return NotionCode(block)
     default:
