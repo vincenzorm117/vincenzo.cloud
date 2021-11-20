@@ -5,8 +5,8 @@ const NotionNumberedList = (block) => {
 
   return (
     <ol className='list-decimal pl-5'>
-      {list.map((item) => (
-        <li>
+      {list.map((item, index) => (
+        <li key={index}>
           <NotionText field={item?.numbered_list_item?.text} />
         </li>
       ))}

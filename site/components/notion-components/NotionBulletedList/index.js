@@ -5,8 +5,8 @@ const NotionBulletedList = (block) => {
 
   return (
     <ul className='list-disc pl-5'>
-      {list.map((item) => (
-        <li>
+      {list.map((item, index) => (
+        <li key={index}>
           <NotionText field={item?.bulleted_list_item?.text} />
         </li>
       ))}
