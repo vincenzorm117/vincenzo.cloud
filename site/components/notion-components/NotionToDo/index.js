@@ -7,6 +7,7 @@ const NotionToDo = (block) => {
         className='inline-block mr-2'
         type='checkbox'
         checked={block?.to_do?.checked}
+        readOnly={true}
       />
       <NotionText field={block?.to_do?.text} />
     </div>
