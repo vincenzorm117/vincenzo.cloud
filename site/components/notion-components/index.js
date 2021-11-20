@@ -9,6 +9,7 @@ import {
   NOTION_TYPE_HEADING_3,
   NOTION_TYPE_NUMBERED_LIST,
   NOTION_TYPE_PARAGRAPH,
+  NOTION_TYPE_TOGGLE,
   NOTION_TYPE_TO_DO
 } from 'utils/notion'
 import NotionBulletedList from './NotionBulletedList'
@@ -18,6 +19,7 @@ import NotionHeading from './NotionHeading'
 import NotionNumberedList from './NotionNumberedList'
 import NotionParagraph from './NotionParagraph'
 import NotionToDo from './NotionToDo'
+import NotionToggleList from './NotionToggleList'
 
 const NotionComponent = ({ block }) => {
   switch (block.type) {
@@ -33,6 +35,8 @@ const NotionComponent = ({ block }) => {
     case NOTION_TYPE_HEADING_2:
     case NOTION_TYPE_HEADING_3:
       return NotionHeading(block)
+    case NOTION_TYPE_TOGGLE:
+      return NotionToggleList(block)
     case NOTION_TYPE_TO_DO:
       return NotionToDo(block)
     case NOTION_TYPE_CODE:
@@ -40,7 +44,9 @@ const NotionComponent = ({ block }) => {
     default:
       return (
         <div className='p-4 bg-purple-dark text-white-default'>
-          Unknown Block ({block.id})
+          <h2>Unknown Block</h2>
+          {block.id} <br />
+          {block.type}
         </div>
       )
       return null
