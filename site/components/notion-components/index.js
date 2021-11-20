@@ -2,6 +2,7 @@ import { useNotionContext } from 'providers/NotionProvider'
 import {
   NOTION_TYPE_BREADCRUMB,
   NOTION_TYPE_BULLETED_LIST,
+  NOTION_TYPE_CALLOUT,
   NOTION_TYPE_CODE,
   NOTION_TYPE_DIVIDER,
   NOTION_TYPE_HEADING_1,
@@ -14,6 +15,7 @@ import {
   NOTION_TYPE_TO_DO
 } from 'utils/notion'
 import NotionBulletedList from './NotionBulletedList'
+import NotionCallout from './NotionCallout'
 import NotionCode from './NotionCode'
 import NotionDivider from './NotionDivider'
 import NotionHeading from './NotionHeading'
@@ -37,6 +39,8 @@ const NotionComponent = ({ block }) => {
     case NOTION_TYPE_HEADING_2:
     case NOTION_TYPE_HEADING_3:
       return NotionHeading(block)
+    case NOTION_TYPE_CALLOUT:
+      return NotionCallout(block)
     case NOTION_TYPE_QUOTE:
       return NotionQuote(block)
     case NOTION_TYPE_TOGGLE:
