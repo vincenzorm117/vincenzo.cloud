@@ -9,6 +9,7 @@ import {
   NOTION_TYPE_HEADING_3,
   NOTION_TYPE_NUMBERED_LIST,
   NOTION_TYPE_PARAGRAPH,
+  NOTION_TYPE_QUOTE,
   NOTION_TYPE_TOGGLE,
   NOTION_TYPE_TO_DO
 } from 'utils/notion'
@@ -18,6 +19,7 @@ import NotionDivider from './NotionDivider'
 import NotionHeading from './NotionHeading'
 import NotionNumberedList from './NotionNumberedList'
 import NotionParagraph from './NotionParagraph'
+import NotionQuote from './NotionQuote'
 import NotionToDo from './NotionToDo'
 import NotionToggleList from './NotionToggleList'
 
@@ -35,6 +37,8 @@ const NotionComponent = ({ block }) => {
     case NOTION_TYPE_HEADING_2:
     case NOTION_TYPE_HEADING_3:
       return NotionHeading(block)
+    case NOTION_TYPE_QUOTE:
+      return NotionQuote(block)
     case NOTION_TYPE_TOGGLE:
       return NotionToggleList(block)
     case NOTION_TYPE_TO_DO:
@@ -49,7 +53,6 @@ const NotionComponent = ({ block }) => {
           {block.type}
         </div>
       )
-      return null
   }
 }
 
