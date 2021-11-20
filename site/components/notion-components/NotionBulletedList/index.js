@@ -1,5 +1,17 @@
+import NotionText from '../NotionText'
+
 const NotionBulletedList = (block) => {
-  return <hr />
+  const list = block?.bulleted_list ?? []
+
+  return (
+    <ul className='list-disc pl-5'>
+      {list.map((item) => (
+        <li>
+          <NotionText field={item?.bulleted_list_item?.text} />
+        </li>
+      ))}
+    </ul>
+  )
 }
 
 export default NotionBulletedList

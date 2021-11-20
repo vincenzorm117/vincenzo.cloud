@@ -1,18 +1,20 @@
 import { useNotionContext } from 'providers/NotionProvider'
 import {
   NOTION_TYPE_BREADCRUMB,
-  NOTION_TYPE_BULLETED_LIST_ITEM,
+  NOTION_TYPE_BULLETED_LIST,
   NOTION_TYPE_CODE,
   NOTION_TYPE_DIVIDER,
   NOTION_TYPE_HEADING_1,
   NOTION_TYPE_HEADING_2,
   NOTION_TYPE_HEADING_3,
+  NOTION_TYPE_NUMBERED_LIST,
   NOTION_TYPE_PARAGRAPH
 } from 'utils/notion'
 import NotionBulletedList from './NotionBulletedList'
 import NotionCode from './NotionCode'
 import NotionDivider from './NotionDivider'
 import NotionHeading from './NotionHeading'
+import NotionNumberedList from './NotionNumberedList'
 import NotionParagraph from './NotionParagraph'
 
 const NotionComponent = ({ block }) => {
@@ -21,8 +23,10 @@ const NotionComponent = ({ block }) => {
       return NotionParagraph(block)
     case NOTION_TYPE_DIVIDER:
       return NotionDivider(block)
-    case NOTION_TYPE_BULLETED_LIST_ITEM:
+    case NOTION_TYPE_BULLETED_LIST:
       return NotionBulletedList(block)
+    case NOTION_TYPE_NUMBERED_LIST:
+      return NotionNumberedList(block)
     case NOTION_TYPE_HEADING_1:
     case NOTION_TYPE_HEADING_2:
     case NOTION_TYPE_HEADING_3:
