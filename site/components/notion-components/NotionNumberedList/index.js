@@ -1,7 +1,6 @@
 import NotionText from '../NotionText'
 
 const NotionNumberedList = (block) => {
-  console.log(block)
   const list = block?.numbered_list ?? []
 
   return (
