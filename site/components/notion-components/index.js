@@ -8,6 +8,7 @@ import {
   NOTION_TYPE_HEADING_1,
   NOTION_TYPE_HEADING_2,
   NOTION_TYPE_HEADING_3,
+  NOTION_TYPE_IMAGE,
   NOTION_TYPE_NUMBERED_LIST,
   NOTION_TYPE_PARAGRAPH,
   NOTION_TYPE_QUOTE,
@@ -19,6 +20,7 @@ import NotionCallout from './NotionCallout'
 import NotionCode from './NotionCode'
 import NotionDivider from './NotionDivider'
 import NotionHeading from './NotionHeading'
+import NotionImage from './NotionImage'
 import NotionNumberedList from './NotionNumberedList'
 import NotionParagraph from './NotionParagraph'
 import NotionQuote from './NotionQuote'
@@ -39,6 +41,8 @@ const NotionComponent = ({ block }) => {
     case NOTION_TYPE_HEADING_2:
     case NOTION_TYPE_HEADING_3:
       return NotionHeading(block)
+    case NOTION_TYPE_IMAGE:
+      return NotionImage(block)
     case NOTION_TYPE_CALLOUT:
       return NotionCallout(block)
     case NOTION_TYPE_QUOTE:

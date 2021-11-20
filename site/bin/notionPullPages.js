@@ -7,6 +7,7 @@ const uuidv4 = require('uuid').v4
 
 const NOTION_TYPE_BULLETED_LIST_ITEM = 'bulleted_list_item'
 const NOTION_TYPE_NUMBERED_LIST_ITEM = 'numbered_list_item'
+const NOTION_TYPE_IMAGE = 'image'
 
 class Cache {
   db = {}
@@ -95,11 +96,15 @@ const BlockGetAllChildren = async (res, notion) => {
 
     res.blocks = response.results
 
-    for (const block of response.results) {
+    for await (const block of response.results) {
       cache.add(block)
 
       if (block.has_children === true) {
         queue.push(block)
+      }
+
+      if (block.type === NOTION_TYPE_IMAGE) {
+        block.local = await DownloadImage(block.image.file.url)
       }
     }
   }
