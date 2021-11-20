@@ -13,3 +13,14 @@ export const IconLink = ({ className = '' }) => (
     ></path>
   </svg>
 )
+
+export const IconRightArrow = ({ className }) => (
+  <svg
+    className={className}
+    xmlns='http://www.w3.org/2000/svg'
+    viewBox='0 0 460.5 531.74'
+    fill='currentColor'
+  >
+    <polygon points='0.5,0.866 459.5,265.87 0.5,530.874 ' />
+  </svg>
+)
