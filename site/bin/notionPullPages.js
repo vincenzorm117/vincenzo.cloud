@@ -5,6 +5,9 @@ const path = require('path')
 const { Client } = require('@notionhq/client')
 const uuidv4 = require('uuid').v4
 
+const NOTION_TYPE_BULLETED_LIST_ITEM = 'bulleted_list_item'
+const NOTION_TYPE_NUMBERED_LIST_ITEM = 'numbered_list_item'
+
 class Cache {
   db = {}
 
@@ -116,21 +119,61 @@ const BlockGetAllChildren = async (res, notion) => {
   }
 
   for (const page of Object.values(pages)) {
+    // [Step] Setup page cover with local URL
     page.local = {}
 
     if (page?.cover?.file?.url) {
       page.local.cover = await DownloadImage(page.cover.file.url)
     }
 
+    // [Step] Setup slug
     try {
       page.slug = page.properties.slug.rich_text
         .map((s) => s.plain_text)
         .join('')
     } catch (_) {
-      page.sluug = page.id
+      page.slug = page.id
+    }
+
+    // [Step] Group lists
+    for (let i = 0; i < page.blocks.length; i++) {
+      const currBlock = page.blocks[i]
+
+      // Skip block if not part of a list
+      if (
+        currBlock.type !== NOTION_TYPE_BULLETED_LIST_ITEM &&
+        currBlock.type !== NOTION_TYPE_NUMBERED_LIST_ITEM
+      ) {
+        continue
+      }
+
+      const listType = currBlock.type
+      const listTypeKey = listType.replace(/_item$/, '')
+
+      const bulletItemBlock = {
+        object: 'block',
+        type: listTypeKey,
+        id: uuidv4(),
+        [listTypeKey]: []
+      }
+
+      for (let j = i; j < page.blocks.length; j++) {
+        if (page.blocks[j].type === listType) {
+          bulletItemBlock[listTypeKey].push(page.blocks[j])
+        } else {
+          break
+        }
+      }
+
+      page.blocks.splice(
+        i,
+        bulletItemBlock[listTypeKey].length,
+        bulletItemBlock
+      )
     }
   }
 
+  // [Step] Write files
   fs.writeFileSync(
     path.resolve(__dirname, '../.content/pages.json'),
     JSON.stringify(pages)

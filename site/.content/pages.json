@@ -44,12 +44,12 @@
     "object": "page",
     "id": "db8c86c9-0240-4bd5-99cc-9e98b3a9a19e",
     "created_time": "2021-11-13T22:20:00.000Z",
-    "last_edited_time": "2021-11-20T17:39:00.000Z",
+    "last_edited_time": "2021-11-20T19:06:00.000Z",
     "cover": {
       "type": "file",
       "file": {
-        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7e6128eb-fc69-4688-8b4e-a60c3c5e44ec/Frame_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211120T173945Z&X-Amz-Expires=3600&X-Amz-Signature=817ed4420b7ee57ca8c0158309364e834a3f05c27d6a73e705263fc70223af9d&X-Amz-SignedHeaders=host&x-id=GetObject",
-        "expiry_time": "2021-11-20T18:39:45.852Z"
+        "url": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/7e6128eb-fc69-4688-8b4e-a60c3c5e44ec/Frame_1.svg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20211120%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211120T194228Z&X-Amz-Expires=3600&X-Amz-Signature=0b920fbcf740f7b74a7522144f9a8fb028443994774265e5d9074953d5a3caa2&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2021-11-20T20:42:28.877Z"
       }
     },
     "icon": null,
@@ -1126,7 +1126,7 @@
         "object": "block",
         "id": "fdb5355a-5d60-49dc-97bb-06f3e9f2f330",
         "created_time": "2021-11-20T17:33:00.000Z",
-        "last_edited_time": "2021-11-20T17:34:00.000Z",
+        "last_edited_time": "2021-11-20T18:55:00.000Z",
         "has_children": false,
         "archived": false,
         "type": "code",
@@ -1135,7 +1135,7 @@
             {
               "type": "text",
               "text": {
-                "content": "function passwordGenerator(size) {\n    const alphabet = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()_+|/\\\\,.<>'\n\n    let password = '';\n    while(size-- > 0) {\n        password += alphabet[Math.floor(Math.random()*alphabet.length)]\n    }\n    return password;\n}\n\n\nconsole.log(passwordGenerator(100))",
+                "content": "function Hello() {\n\tconsole.log('Hello World! 🚀');\n}\n\nHello()\n// Hello World! 🚀",
                 "link": null
               },
               "annotations": {
@@ -1146,7 +1146,7 @@
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "function passwordGenerator(size) {\n    const alphabet = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()_+|/\\\\,.<>'\n\n    let password = '';\n    while(size-- > 0) {\n        password += alphabet[Math.floor(Math.random()*alphabet.length)]\n    }\n    return password;\n}\n\n\nconsole.log(passwordGenerator(100))",
+              "plain_text": "function Hello() {\n\tconsole.log('Hello World! 🚀');\n}\n\nHello()\n// Hello World! 🚀",
               "href": null
             }
           ],
@@ -1155,19 +1155,253 @@
       },
       {
         "object": "block",
-        "id": "e47ac17e-8a0f-4e4d-b6fd-d21d205b0d91",
-        "created_time": "2021-11-20T15:15:00.000Z",
-        "last_edited_time": "2021-11-20T15:41:00.000Z",
-        "has_children": false,
-        "archived": false,
-        "type": "paragraph",
-        "paragraph": { "text": [] }
+        "type": "bulleted_list",
+        "id": "efabace0-b730-408f-90e5-119707f09186",
+        "bulleted_list": [
+          {
+            "object": "block",
+            "id": "4d25704e-63b1-4f1b-bfd4-0764186deaaf",
+            "created_time": "2021-11-20T19:03:00.000Z",
+            "last_edited_time": "2021-11-20T19:03:00.000Z",
+            "has_children": false,
+            "archived": false,
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": { "content": "Item one", "link": null },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Item one",
+                  "href": null
+                }
+              ]
+            }
+          },
+          {
+            "object": "block",
+            "id": "47a1b4ba-ee9d-4996-a4c3-cbd11c67f9dd",
+            "created_time": "2021-11-20T19:03:00.000Z",
+            "last_edited_time": "2021-11-20T19:03:00.000Z",
+            "has_children": false,
+            "archived": false,
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": { "content": "Item two", "link": null },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Item two",
+                  "href": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "numbered_list",
+        "id": "3a37e590-5409-42aa-8c04-1ed1090a7965",
+        "numbered_list": [
+          {
+            "object": "block",
+            "id": "a7d39d42-255e-44ab-9054-67af10b642b2",
+            "created_time": "2021-11-20T19:05:00.000Z",
+            "last_edited_time": "2021-11-20T19:05:00.000Z",
+            "has_children": false,
+            "archived": false,
+            "type": "numbered_list_item",
+            "numbered_list_item": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": { "content": "Item one", "link": null },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Item one",
+                  "href": null
+                }
+              ]
+            }
+          },
+          {
+            "object": "block",
+            "id": "c818e63b-968d-4d95-b07a-ca1e3c2d24f9",
+            "created_time": "2021-11-20T19:05:00.000Z",
+            "last_edited_time": "2021-11-20T19:06:00.000Z",
+            "has_children": false,
+            "archived": false,
+            "type": "numbered_list_item",
+            "numbered_list_item": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": { "content": "Item two", "link": null },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Item two",
+                  "href": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "bulleted_list",
+        "id": "aa97a3f3-9aea-43b5-bd3d-2cb8131193bd",
+        "bulleted_list": [
+          {
+            "object": "block",
+            "id": "45e653cb-a464-402a-842a-0ea48f5629ad",
+            "created_time": "2021-11-20T19:05:00.000Z",
+            "last_edited_time": "2021-11-20T19:06:00.000Z",
+            "has_children": false,
+            "archived": false,
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": { "content": "Second List 1", "link": null },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Second List 1",
+                  "href": null
+                }
+              ]
+            }
+          },
+          {
+            "object": "block",
+            "id": "8e76169b-da0f-468a-a119-a4fbd9031783",
+            "created_time": "2021-11-20T19:06:00.000Z",
+            "last_edited_time": "2021-11-20T19:06:00.000Z",
+            "has_children": false,
+            "archived": false,
+            "type": "bulleted_list_item",
+            "bulleted_list_item": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": { "content": "Second List 2", "link": null },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Second List 2",
+                  "href": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "object": "block",
+        "type": "numbered_list",
+        "id": "061f2f91-3c09-4acc-ab08-a1b5f48f8e3f",
+        "numbered_list": [
+          {
+            "object": "block",
+            "id": "9cfab705-0306-4392-8fe0-ea9ba86d0cd2",
+            "created_time": "2021-11-20T19:06:00.000Z",
+            "last_edited_time": "2021-11-20T19:06:00.000Z",
+            "has_children": false,
+            "archived": false,
+            "type": "numbered_list_item",
+            "numbered_list_item": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": { "content": "Second List 1", "link": null },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Second List 1",
+                  "href": null
+                }
+              ]
+            }
+          },
+          {
+            "object": "block",
+            "id": "b63136f5-f0fb-416b-8d0b-7cde07c95a27",
+            "created_time": "2021-11-20T19:06:00.000Z",
+            "last_edited_time": "2021-11-20T19:06:00.000Z",
+            "has_children": false,
+            "archived": false,
+            "type": "numbered_list_item",
+            "numbered_list_item": {
+              "text": [
+                {
+                  "type": "text",
+                  "text": { "content": "Second List 2", "link": null },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Second List 2",
+                  "href": null
+                }
+              ]
+            }
+          }
+        ]
       }
     ],
     "local": {
       "cover": {
-        "localFileName": "ce71c729-7595-4c76-aa70-591bf6e92167.svg",
-        "localUrl": "/blog/ce71c729-7595-4c76-aa70-591bf6e92167.svg"
+        "localFileName": "b06436f6-b740-4883-ab91-2f4663ee61c3.svg",
+        "localUrl": "/blog/b06436f6-b740-4883-ab91-2f4663ee61c3.svg"
       }
     },
     "slug": "test"
