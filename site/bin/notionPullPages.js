@@ -108,6 +108,7 @@ const BlockGetAllChildren = async (res, notion) => {
     const currBlock = queue.pop()
 
     const response = await BlockGetAllChildren(currBlock, notion)
+    currBlock.child_blocks = response.results
 
     for (const block of response.results) {
       cache.add(block)
