@@ -5,6 +5,7 @@ import {
   NOTION_TYPE_CALLOUT,
   NOTION_TYPE_CODE,
   NOTION_TYPE_DIVIDER,
+  NOTION_TYPE_EMBED,
   NOTION_TYPE_HEADING_1,
   NOTION_TYPE_HEADING_2,
   NOTION_TYPE_HEADING_3,
@@ -20,6 +21,7 @@ import NotionBulletedList from './NotionBulletedList'
 import NotionCallout from './NotionCallout'
 import NotionCode from './NotionCode'
 import NotionDivider from './NotionDivider'
+import NotionEmbed from './NotionEmbed'
 import NotionHeading from './NotionHeading'
 import NotionImage from './NotionImage'
 import NotionNumberedList from './NotionNumberedList'
@@ -47,6 +49,8 @@ const NotionComponent = ({ block }) => {
       return NotionVideo(block)
     case NOTION_TYPE_IMAGE:
       return NotionImage(block)
+    case NOTION_TYPE_EMBED:
+      return NotionEmbed(block)
     case NOTION_TYPE_CALLOUT:
       return NotionCallout(block)
     case NOTION_TYPE_QUOTE:
