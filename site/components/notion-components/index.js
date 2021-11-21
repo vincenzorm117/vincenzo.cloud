@@ -13,7 +13,8 @@ import {
   NOTION_TYPE_PARAGRAPH,
   NOTION_TYPE_QUOTE,
   NOTION_TYPE_TOGGLE,
-  NOTION_TYPE_TO_DO
+  NOTION_TYPE_TO_DO,
+  NOTION_TYPE_VIDEO
 } from 'utils/notion'
 import NotionBulletedList from './NotionBulletedList'
 import NotionCallout from './NotionCallout'
@@ -26,6 +27,7 @@ import NotionParagraph from './NotionParagraph'
 import NotionQuote from './NotionQuote'
 import NotionToDo from './NotionToDo'
 import NotionToggleList from './NotionToggleList'
+import NotionVideo from './NotionVideo'
 
 const NotionComponent = ({ block }) => {
   switch (block.type) {
@@ -41,6 +43,8 @@ const NotionComponent = ({ block }) => {
     case NOTION_TYPE_HEADING_2:
     case NOTION_TYPE_HEADING_3:
       return NotionHeading(block)
+    case NOTION_TYPE_VIDEO:
+      return NotionVideo(block)
     case NOTION_TYPE_IMAGE:
       return NotionImage(block)
     case NOTION_TYPE_CALLOUT:
