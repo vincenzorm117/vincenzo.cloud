@@ -31,11 +31,12 @@ const NotionText = ({ field }) => {
           )
         case 'text':
         default:
-          if (classes.length > 0) {
+          if (s.href !== null) {
             return (
-              <span
+              <a
+                href={s.href}
                 key={index}
-                className={classes.join(' ')}
+                className={classes.concat('underline').join(' ')}
                 dangerouslySetInnerHTML={{
                   __html: strNewLineToHtml(s.text.content)
                 }}
@@ -45,6 +46,7 @@ const NotionText = ({ field }) => {
           return (
             <span
               key={index}
+              className={classes.join(' ')}
               dangerouslySetInnerHTML={{
                 __html: strNewLineToHtml(s.text.content)
               }}
