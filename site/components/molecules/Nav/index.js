@@ -4,6 +4,7 @@ import styles from './styles.module.scss'
 import Link from 'next/link'
 import { useGlobalContext } from 'providers/GlobalProvider'
 import { useRouter } from 'next/dist/client/router'
+import { IconMoon, IconSun } from '@/components/atoms/Icon'
 
 const links = [
   { text: 'Home', href: '/' },
@@ -14,8 +15,10 @@ const links = [
 
 const Nav = ({}) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { maskHook } = useGlobalContext()
+  const { maskHook, darkModeHook } = useGlobalContext()
   const [, setMaskIsOpen] = maskHook
+  const [{ isDark }, dispatch] = darkModeHook
+
   const router = useRouter()
 
   const toggleNav = useCallback(
@@ -54,13 +57,32 @@ const Nav = ({}) => {
           </li>
         ))}
       </ul>
-      <button
-        aria-label='Nav menu'
-        onClick={() => toggleNav(!isOpen)}
-        className='block ml-auto rounded-full bg-cyan-default shadow-md hover:shadow-lg transition-shadow duration-200 relative h-[50px] w-[50px]'
-      >
-        <div className={isOpen ? styles.burgerActive : styles.burger}></div>
-      </button>
+      <div className='group'>
+        <button
+          aria-label='Nav menu'
+          onClick={() => toggleNav(!isOpen)}
+          className='block ml-auto rounded-full bg-cyan-default shadow-md hover:shadow-lg transition-shadow duration-200 relative h-[50px] w-[50px] z-20'
+        >
+          <div className={isOpen ? styles.burgerActive : styles.burger}></div>
+        </button>
+        <div className=''>
+          {isDark ? (
+            <button
+              className='text-[#c4a500] bg-[#ffee93]  absolute right-[92px] bottom-[32px] w-[26px] rounded-full  box-content p-[7px] shadow-md hover:shadow-lg duration-200 transition-all transform translate-x-10 opacity-0 group-hover:opacity-100 group-hover:-translate-x-0'
+              onClick={() => dispatch({ isDark: false })}
+            >
+              <IconSun />
+            </button>
+          ) : (
+            <button
+              className='text-[#fff] bg-[#43435c] absolute right-[92px] bottom-[32px] w-[26px] rounded-full  box-content p-[7px] shadow-md hover:shadow-lg duration-200 transition-all transform translate-x-10 opacity-0 group-hover:opacity-100 group-hover:-translate-x-0'
+              onClick={() => dispatch({ isDark: true })}
+            >
+              <IconMoon />
+            </button>
+          )}
+        </div>
+      </div>
     </nav>
   )
 }
