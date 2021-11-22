@@ -7,12 +7,18 @@ const BlinkingGrid = ({
   colorDot = '#fff',
   bgColor = '#181818',
   gridDotDiameter = 2,
-  gridGutterSize = 40
+  gridGutterSize = 40,
+  isDark = false
 }) => {
   const canvasRef = useRef(null)
   const canvasDimensions = useRef({ width: 0, height: 0 })
   const gridInfo = useRef({ xCount: 0, yCount: 0, nodeCount: 0 })
   const blinkingNodes = useRef({})
+  const shouldReDrawGrid = useRef(true)
+
+  useEffect(() => {
+    shouldReDrawGrid.current = true
+  }, [isDark])
 
   const getUnusedIndex = ({ blinkingNodes, gridInfo }) => {
     let index
@@ -28,7 +34,12 @@ const BlinkingGrid = ({
     const { width, height } = canvasDimensions.current
     const space = gridGutterSize + gridDotDiameter
 
-    if (clientWidth !== width || clientHeight !== height) {
+    if (
+      shouldReDrawGrid.current ||
+      clientWidth !== width ||
+      clientHeight !== height
+    ) {
+      shouldReDrawGrid.current = false
       // Update dimensions
       canvasDimensions.current.width = clientWidth
       canvasDimensions.current.height = clientHeight

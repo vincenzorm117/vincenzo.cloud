@@ -3,11 +3,11 @@ import { useGlobalContext } from 'providers/GlobalProvider'
 
 const SectionHomeHero = ({}) => {
   const { darkModeHook } = useGlobalContext()
-  const isDark = darkModeHook?.[0]?.isDark ?? false
+  const [{ isDark }] = darkModeHook
 
   const gridColors = isDark
-    ? { colorDot: '#fff', bgColor: '#181818' }
-    : { colorDot: '#181818', bgColor: '#fff' }
+    ? { colorDot: '#fff', bgColor: '#181818', isDark }
+    : { colorDot: '#181818', bgColor: '#fff', isDark }
 
   return (
     <section className='relative'>
