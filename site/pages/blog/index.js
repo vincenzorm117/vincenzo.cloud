@@ -4,7 +4,10 @@ import NotionText from '@/components/notion-components/NotionText'
 
 export default function Page({ pages, blocks }) {
   return (
-    <div className='py-32'>
+    <article
+      className='pt-16 sm:pt-24 pb-32 dark:bg-purple-dark dark:text-white-default min-h-full'
+      style={{ minHeight: 'calc(100vh - 137px)' }}
+    >
       <h1 className='text-center pb-20 text-5xl'>Blog</h1>
       <div className='flex flex-wrap max-w-3xl mx-auto px-10'>
         {Object.values(pages).map((page) => (
@@ -22,7 +25,7 @@ export default function Page({ pages, blocks }) {
           </a>
         ))}
       </div>
-    </div>
+    </article>
   )
 }
 
