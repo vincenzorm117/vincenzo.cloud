@@ -6,7 +6,7 @@ const SectionHomeHero = ({}) => {
   const [{ isDark }] = darkModeHook
 
   const gridColors = isDark
-    ? { colorDot: '#fff', bgColor: '#181818', isDark }
+    ? { colorDot: '#fff', bgColor: '#111', isDark }
     : { colorDot: '#181818', bgColor: '#fff', isDark }
 
   return (
