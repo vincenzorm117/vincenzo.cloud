@@ -29,13 +29,6 @@ jobs:
         run: npm ci
         working-directory: ./site
 
-      - name: Pull notion data
-        run: |
-          export NOTION_KEY=${{ secrets.NOTION_KEY }};
-          export NOTION_DATABASE_ID=${{ secrets.NOTION_DATABASE_ID }};
-          npm run notion:pull
-        working-directory: ./site
-
       - name: Build App
         run: npm run build
         working-directory: ./site
