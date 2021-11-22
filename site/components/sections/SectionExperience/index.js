@@ -5,11 +5,11 @@ import proExperiences from '@/data/professional-experience.json'
 import styles from './styles.module.scss'
 
 const SectionExperience = ({}) => (
-  <section className='bg-purple-dark pb-20'>
-    <h1 className='text-white-default text-6xl text-center pt-20'>
+  <section className='pb-20 px-10 bg-white-default dark:bg-purple-dark'>
+    <h1 className='dark:text-white-default text-purple-dark text-6xl text-center pt-20'>
       Experience
     </h1>
-    <p className='text-center pb-14 text-white-default'>
+    <p className='text-center pb-14 text-purple-dark dark:text-white-default'>
       <span className='text-[20px]'>Resume:</span>
       <a
         className={cn(styles.link, 'mx-[24px]')}
@@ -22,8 +22,8 @@ const SectionExperience = ({}) => (
       </a>
     </p>
     <div className='max-w-4xl mx-auto'>
-      {proExperiences.map((e) => (
-        <PortfolioItem data={e} className='py-10' />
+      {proExperiences.map((e, index) => (
+        <PortfolioItem key={index} data={e} className='py-10' />
       ))}
     </div>
   </section>

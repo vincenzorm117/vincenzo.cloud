@@ -2,10 +2,10 @@ import PortfolioItem from '@/components/molecules/PortfolioItem'
 import universityExperiences from '@/data/university-experience.json'
 
 const SectionUniversityExperience = () => (
-  <section className='bg-purple-dark py-10'>
+  <section className='py-10 bg-white-default dark:bg-purple-dark'>
     <div className='max-w-4xl mx-auto'>
-      {universityExperiences.map((e) => (
-        <PortfolioItem data={e} className='py-10' />
+      {universityExperiences.map((e, index) => (
+        <PortfolioItem key={index} data={e} className='py-10' />
       ))}
     </div>
   </section>
