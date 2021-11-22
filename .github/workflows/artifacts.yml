@@ -30,7 +30,9 @@ jobs:
         working-directory: ./site
 
       - name: Pull notion data
-        run: npm run notion:pull
+        run: |
+          printenv
+          npm run notion:pull
         working-directory: ./site
 
       - name: Build App
