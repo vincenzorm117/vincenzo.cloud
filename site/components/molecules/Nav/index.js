@@ -37,13 +37,16 @@ const Nav = ({}) => {
     <nav
       onMouseLeave={() => toggleNav(false)}
       className={cn(
-        'fixed z-20 bottom-0 right-0 pb-[25px] pr-[25px] h-[400px] w-[300px] flex flex-col justify-end'
+        'fixed z-20 bottom-0 right-0 pb-[25px] pr-[25px] flex flex-col justify-end',
+        isOpen ? 'h-[320px] w-[220px]' : ''
       )}
     >
       <ul
         className={cn(
           'text-right pb-5 transition-opacity',
-          isOpen ? 'opacity-100' : 'opacity-0'
+          isOpen
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none hidden'
         )}
       >
         {links.map((link) => (
@@ -65,23 +68,21 @@ const Nav = ({}) => {
         >
           <div className={isOpen ? styles.burgerActive : styles.burger}></div>
         </button>
-        <div className=''>
-          {isDark ? (
-            <button
-              className='text-[#c4a500] bg-[#ffee93]  absolute right-[92px] bottom-[32px] w-[26px] rounded-full  box-content p-[7px] shadow-md hover:shadow-lg duration-200 transition-all transform translate-x-10 opacity-0 group-hover:opacity-100 group-hover:-translate-x-0'
-              onClick={() => dispatch({ isDark: false })}
-            >
-              <IconSun />
-            </button>
-          ) : (
-            <button
-              className='text-[#fff] bg-[#43435c] absolute right-[92px] bottom-[32px] w-[26px] rounded-full  box-content p-[7px] shadow-md hover:shadow-lg duration-200 transition-all transform translate-x-10 opacity-0 group-hover:opacity-100 group-hover:-translate-x-0'
-              onClick={() => dispatch({ isDark: true })}
-            >
-              <IconMoon />
-            </button>
-          )}
-        </div>
+        {isDark ? (
+          <button
+            className='text-[#fff] bg-[#43435c] absolute right-[92px] bottom-[32px] w-[26px] rounded-full  box-content p-[7px] shadow-md hover:shadow-lg duration-200 transition-all transform translate-x-10 opacity-0 group-hover:opacity-100 group-hover:-translate-x-0'
+            onClick={() => dispatch({ isDark: false })}
+          >
+            <IconMoon />
+          </button>
+        ) : (
+          <button
+            className='text-[#c4a500] bg-[#ffee93]  absolute right-[92px] bottom-[32px] w-[26px] rounded-full  box-content p-[7px] shadow-md hover:shadow-lg duration-200 transition-all transform translate-x-10 opacity-0 group-hover:opacity-100 group-hover:-translate-x-0'
+            onClick={() => dispatch({ isDark: true })}
+          >
+            <IconSun />
+          </button>
+        )}
       </div>
     </nav>
   )
