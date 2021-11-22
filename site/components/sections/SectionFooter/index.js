@@ -1,20 +1,39 @@
+import { IconMoon, IconSun } from '@/components/atoms/Icon'
 import SocialLinks from 'components/molecules/SocialLinks'
+import { useGlobalContext } from 'providers/GlobalProvider'
 
-const SectionFooter = ({}) => (
-  <footer className='bg-[#b6995e14] dark:bg-purple-darkest dark:text-white-default text-purple-darkest bg-white-default'>
-    <div className='container mx-auto'>
-      <div className='flex justify-between pt-10 pb-9'>
-        <a className='text-2xl' href='mailto:vincenzorm117@gmail.com'>
-          Email
-        </a>
-        <div>
+const SectionFooter = ({}) => {
+  const { darkModeHook } = useGlobalContext()
+  const [{ isDark }, dispatch] = darkModeHook
+
+  return (
+    <footer className='bg-[#b6995e14] dark:bg-purple-darkest dark:text-white-default text-purple-darkest bg-white-default pb-4'>
+      <div className='container mx-auto'>
+        <div className='pt-10 pb-20 sm:pb-16 flex justify-center'>
           <SocialLinks />
         </div>
+        <div className='flex justify-center'>
+          {isDark ? (
+            <button
+              className='text-[#fff] bg-[#43435c] w-[26px] rounded-full  box-content p-[7px]'
+              onClick={() => dispatch({ isDark: false })}
+            >
+              <IconMoon />
+            </button>
+          ) : (
+            <button
+              className='text-[#c4a500] bg-[#ffee93] w-[26px] rounded-full box-content p-[7px]'
+              onClick={() => dispatch({ isDark: true })}
+            >
+              <IconSun />
+            </button>
+          )}
+        </div>
+        <div className='text-center text-brown-darkest text-[13px] mt-10'>
+          &copy; {new Date().getFullYear()} Vincenzo Marconi
+        </div>
       </div>
-      <div className='text-right text-brown-darkest'>
-        &copy; {new Date().getFullYear()} Vincenzo Marconi, All Rights Reserved
-      </div>
-    </div>
-  </footer>
-)
+    </footer>
+  )
+}
 export default SectionFooter
