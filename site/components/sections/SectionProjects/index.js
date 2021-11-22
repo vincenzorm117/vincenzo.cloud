@@ -1,10 +1,16 @@
 import { Fragment } from 'react'
 import PortfolioItem from '@/components/molecules/PortfolioItem'
 import projectData from '@/data/projects.json'
+import cn from 'classnames'
 
-const SectionProjects = ({}) => (
-  <section className='bg-white-default text-purple-dark dark:bg-purple-dark dark:text-white-default pb-20'>
-    <h1 className='text-6xl text-center pt-20'>Projects</h1>
+const SectionProjects = ({ className = '' }) => (
+  <section
+    className={cn(
+      'bg-white-default text-purple-dark dark:bg-purple-dark dark:text-white-default pb-20 px-6',
+      className
+    )}
+  >
+    <h1 className='text-6xl text-center'>Projects</h1>
     {projectData.map((p) => (
       <Fragment key={p.title}>
         <h2 className='text-center  uppercase text-xl mt-20 font-sans font-light tracking-widest'>
@@ -12,7 +18,7 @@ const SectionProjects = ({}) => (
         </h2>
         <div className='max-w-4xl mx-auto'>
           {p.projects.map((e, index) => (
-            <PortfolioItem key={index} data={e} className='py-10' />
+            <PortfolioItem key={index} data={e} className='py-8 sm:py-10' />
           ))}
         </div>
       </Fragment>

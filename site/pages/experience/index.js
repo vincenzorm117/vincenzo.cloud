@@ -5,7 +5,7 @@ import SectionUniversityExperience from '@/components/sections/SectionUniversity
 export default function Page() {
   return (
     <>
-      <SectionExperience />
+      <SectionExperience className='pt-16 sm:pt-24' />
       <SectionEducation />
       <SectionUniversityExperience />
     </>
