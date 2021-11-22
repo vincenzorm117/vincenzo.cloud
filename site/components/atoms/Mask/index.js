@@ -11,6 +11,7 @@ const Mask = () => {
 
   return (
     <div
+      style={{ backdropFilter: 'saturate(180%) blur(8px)' }}
       className={cn(
         'fixed z-10 top-0 right-0 bottom-0 left-0 bg-black-default bg-opacity-60 transition-opacity duration-200',
         styles
