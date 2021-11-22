@@ -1,7 +1,7 @@
 import SocialLinks from 'components/molecules/SocialLinks'
 
 const SectionFooter = ({}) => (
-  <footer className='bg-purple-darkest text-white text-white-default'>
+  <footer className='dark:bg-purple-darkest dark:text-white-default text-purple-darkest bg-white-default'>
     <div className='container mx-auto'>
       <div className='flex justify-between pt-10 pb-9'>
         <a className='text-2xl' href='mailto:vincenzorm117@gmail.com'>
