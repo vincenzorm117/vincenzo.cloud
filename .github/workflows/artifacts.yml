@@ -31,7 +31,8 @@ jobs:
 
       - name: Pull notion data
         run: |
-          printenv
+          export NOTION_KEY=${{ secrets.NOTION_KEY }};
+          export NOTION_DATABASE_ID=${{ secrets.NOTION_DATABASE_ID }};
           npm run notion:pull
         working-directory: ./site
 
