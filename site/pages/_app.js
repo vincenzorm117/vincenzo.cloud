@@ -70,7 +70,7 @@ export default function MyApp({ Component, pageProps }) {
           rel='stylesheet'
         />
       </Head>
-      <main className='min-h-[calc(100vh-137px)'>
+      <main style={{ minHeight: 'calc(100vh - 137px)' }}>
         <Component {...pageProps} />
         <Nav />
       </main>
