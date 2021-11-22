@@ -23,12 +23,13 @@ const darkModeReducer = (state, action) => {
 
 export default function MyApp({ Component, pageProps }) {
   const maskHook = useState(false)
-  const darkModeHook = useReducer(darkModeReducer, { isDark: false })
+  const darkModeHook = useReducer(darkModeReducer, { isDark: true })
 
   useEffect(() => {
     const [, dispatch] = darkModeHook
     dispatch({
-      isDark: window.matchMedia('(prefers-color-scheme: dark)').matches
+      // isDark: window.matchMedia('(prefers-color-scheme: dark)').matches
+      isDark: true
     })
   }, [])
 
