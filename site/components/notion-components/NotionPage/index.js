@@ -11,15 +11,15 @@ const NotionPage = ({ page, blocks }) => {
   return (
     // <GlobalProvider.Provider value={{ maskHook }}></GlobalProvider.Provider>
     <NotionProvider.Provider value={{ page, blocks }}>
-      <div className='pt-16 pb-20 px-10 max-w-5xl mx-auto min-h-screen'>
-        {page?.local?.cover?.localUrl && (
-          <div className=''>
-            <img
-              className='max-h-[30vh] container object-cover mx-auto rounded-3xl shadow-lg'
-              src={page?.local?.cover?.localUrl}
-            />
-          </div>
-        )}
+      {page?.local?.cover?.localUrl && (
+        <div className=''>
+          <img
+            className='max-h-[30vh] object-cover shadow-lg'
+            src={page?.local?.cover?.localUrl}
+          />
+        </div>
+      )}
+      <div className='pb-20 px-10 max-w-5xl mx-auto min-h-screen'>
         <h1 className='text-center text-6xl mt-10'>
           <NotionText field={page?.properties?.Name?.title} />
         </h1>

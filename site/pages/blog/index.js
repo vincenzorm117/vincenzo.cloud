@@ -4,7 +4,7 @@ import NotionText from '@/components/notion-components/NotionText'
 
 export default function Page({ pages, blocks }) {
   return (
-    <div className='bg-purple-dark text-white-dark py-32'>
+    <div className='py-32'>
       <h1 className='text-center pb-20 text-5xl'>Blog</h1>
       <div className='flex flex-wrap max-w-3xl mx-auto px-10'>
         {Object.values(pages).map((page) => (
@@ -16,7 +16,7 @@ export default function Page({ pages, blocks }) {
             {page?.local?.cover?.localUrl && (
               <img src={page.local.cover.localUrl} className='rounded-3xl' />
             )}
-            <h2 className='text-3xl'>
+            <h2 className='text-2xl mt-3'>
               <NotionText field={page.properties.Name.title} />
             </h2>
           </a>

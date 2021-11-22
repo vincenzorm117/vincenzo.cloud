@@ -47,7 +47,7 @@ export default function MyApp({ Component, pageProps }) {
           rel='stylesheet'
         />
       </Head>
-      <main>
+      <main className='min-h-[calc(100vh-137px)'>
         <Component {...pageProps} />
         <Nav />
       </main>
