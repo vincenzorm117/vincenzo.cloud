@@ -2,7 +2,7 @@ import cn from 'classnames'
 import { isEmpty } from 'lodash'
 import { useEffect, useState } from 'react'
 
-const SectionGists = ({}) => {
+const SectionGists = ({ className = '' }) => {
   const [gists, setGists] = useState(null)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const SectionGists = ({}) => {
   }
 
   return (
-    <section className='dark:bg-purple-dark pt-10 pb-20'>
+    <section className={cn('dark:bg-purple-dark pb-20 px-6', className)}>
       <h2 className='text-cyan-dark text-5xl text-center'>Gists</h2>
       <ul className='max-w-4xl mx-auto mt-20 rounded-lg bg-gray-light dark:bg-[#15161e]'>
         {gists.map((gist, index) => (
@@ -45,7 +45,9 @@ const SectionGists = ({}) => {
               className='block py-5 px-10 '
             >
               {!isEmpty(gist.description) && (
-                <p className='text-md text-gray-a3'>{gist.description}</p>
+                <p className='text-base sm:text-md text-gray-a3'>
+                  {gist.description}
+                </p>
               )}
             </a>
           </li>

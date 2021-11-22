@@ -2,7 +2,7 @@ import cn from 'classnames'
 import { isEmpty } from 'lodash'
 import { useEffect, useState } from 'react'
 
-const SectionRepos = ({}) => {
+const SectionRepos = ({ className = '' }) => {
   const [repos, setRepos] = useState(null)
 
   useEffect(() => {
@@ -22,8 +22,8 @@ const SectionRepos = ({}) => {
   }
 
   return (
-    <section className='dark:bg-purple-dark pt-20 pb-10'>
-      <h2 className='text-cyan-dark text-5xl text-center'>Repos</h2>
+    <section className={cn('dark:bg-purple-dark pt-20 pb-10 px-6', className)}>
+      <h1 className='text-cyan-dark text-5xl text-center'>Repos</h1>
       <ul className='max-w-4xl mx-auto my-20 rounded-lg bg-gray-light dark:bg-[#15161e]'>
         {repos.map((repo, index) => (
           <li
@@ -38,11 +38,11 @@ const SectionRepos = ({}) => {
               target='_blank'
               className='py-5 px-10 block'
             >
-              <h2 className='text-black-chrome dark:text-white-default uppercase text-[22px] leading-tight font-semibold overflow-hidden text-overflow tracking-wider'>
+              <h2 className='text-black-chrome dark:text-white-default uppercase text-[18px] sm:text-[22px] leading-tight font-semibold overflow-hidden text-overflow tracking-wider'>
                 {repo.name}
               </h2>
               {!isEmpty(repo.description) && (
-                <p className='text-md text-gray-a3 dark:text-[#a3a3a3]'>
+                <p className='text-base sm:text-md text-gray-a3 dark:text-[#a3a3a3]'>
                   {repo.description}
                 </p>
               )}

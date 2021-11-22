@@ -4,8 +4,8 @@ import SectionRepos from '@/components/sections/SectionRepos'
 export default function Page() {
   return (
     <>
-      <SectionRepos />
-      <SectionGists />
+      <SectionRepos className='pt-16 sm:pt-24' />
+      <SectionGists className='pt-2 sm:pt-10' />
     </>
   )
 }
