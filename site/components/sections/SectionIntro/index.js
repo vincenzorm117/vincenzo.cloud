@@ -1,14 +1,14 @@
 const SectionIntro = ({}) => (
   <section className='text-gray-darkest bg-white-dark dark:bg-gray-darkest dark:text-white-dark'>
-    <div className='flex flex-nowrap flex-row justify-center mx-auto container py-28'>
-      <div className='w-4/12'>
+    <div className='sm:flex flex-nowrap sm:flex-row justify-center mx-auto container py-14 sm:py-28'>
+      <div className='sm:w-4/12'>
         <img
           src='/img/profile.jpg'
           alt='Profile Picture'
           className='rounded-full overflow-hidden border-gray-darkest dark:border-white-darker border-4 border-solid w-8/12 mx-auto'
         />
       </div>
-      <div className='flex flex-col justify-center w-8/12'>
+      <div className='flex flex-col justify-center sm:w-8/12 px-10 mt-10 sm:mt-0'>
         <h2 className='text-4xl'>Hello World!</h2>
         <p className='my-6 text-xl leading-10'>
           My name is Vincenzo Marconi and I am Software Engineer <br />
