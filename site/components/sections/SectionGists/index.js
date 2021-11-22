@@ -28,18 +28,22 @@ const SectionGists = ({}) => {
   }
 
   return (
-    <section>
-      <h2 className='text-cyan-dark text-5xl text-center pt-20'>Gists</h2>
-      <ul className='max-w-4xl mx-auto my-20 rounded-lg bg-gray-light'>
+    <section className='dark:bg-purple-dark pt-10 pb-20'>
+      <h2 className='text-cyan-dark text-5xl text-center'>Gists</h2>
+      <ul className='max-w-4xl mx-auto mt-20 rounded-lg bg-gray-light dark:bg-[#15161e]'>
         {gists.map((gist, index) => (
           <li
             key={gist.id}
             className={cn(
-              'py-5 px-10 border-gray-e2 border-solid',
+              'border-gray-e2 dark:border-[#383c51] border-solid',
               index !== 0 && 'border-t-[1px]'
             )}
           >
-            <a href={gist.html_url} target='_blank'>
+            <a
+              href={gist.html_url}
+              target='_blank'
+              className='block py-5 px-10 '
+            >
               {!isEmpty(gist.description) && (
                 <p className='text-md text-gray-a3'>{gist.description}</p>
               )}

@@ -1,19 +1,4 @@
 import Tag from '@/components/atoms/Tag'
-import styled from 'styled-components'
-
-const ListItem = styled.li`
-  &:before {
-    position: absolute;
-    top: 14px;
-    left: 0;
-    content: '';
-    display: block;
-    border-radius: 50%;
-    border: 1px solid currentColor;
-    height: 3px;
-    width: 3px;
-  }
-`
 
 const PortfolioItem = ({ data = {}, className = '' }) => {
   const { dates, title, body, tags } = data
@@ -25,16 +10,17 @@ const PortfolioItem = ({ data = {}, className = '' }) => {
         {title}
       </h2>
       <ul className='text-[#8f8f8f] dark:text-white-b2 pt-3 pb-6'>
-        {body.map((b) => (
-          <ListItem
-            className='py-[3px] pl-[15px] leading-[1.4] text-[20px] text-[#8f8f8f] dark:text-white-b2 relative'
+        {body.map((b, index) => (
+          <li
+            key={index}
+            className='py-[3px] pl-[15px] leading-[1.4] text-[20px] text-[#8f8f8f] dark:text-white-b2 relative before:block before:absolute before:top-[14px] before:left-0 before:rounded-full before:border-solid before:border-[1px] before:border-currentColor before:h-[3px] before:w-[3px]'
             dangerouslySetInnerHTML={{ __html: b }}
           />
         ))}
       </ul>
       <div className='-mx-1 text-base text-[#54a057] dark:text-green-grey'>
-        {tags.map((tag) => (
-          <Tag className='mx-1' key={tag}>
+        {tags.map((tag, index) => (
+          <Tag className='mx-1' key={index}>
             {tag}
           </Tag>
         ))}

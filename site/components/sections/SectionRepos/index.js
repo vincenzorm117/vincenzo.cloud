@@ -22,23 +22,29 @@ const SectionRepos = ({}) => {
   }
 
   return (
-    <section>
-      <h2 className='text-cyan-dark text-5xl text-center pt-20'>Repos</h2>
-      <ul className='max-w-4xl mx-auto my-20 rounded-lg bg-gray-light'>
+    <section className='dark:bg-purple-dark pt-20 pb-10'>
+      <h2 className='text-cyan-dark text-5xl text-center'>Repos</h2>
+      <ul className='max-w-4xl mx-auto my-20 rounded-lg bg-gray-light dark:bg-[#15161e]'>
         {repos.map((repo, index) => (
           <li
             key={repo.id}
             className={cn(
-              'py-5 px-10 border-gray-e2 border-solid',
+              'border-gray-e2 dark:border-[#383c51] border-solid',
               index !== 0 && 'border-t-[1px]'
             )}
           >
-            <a href={repo.html_url} target='_blank'>
-              <h6 className='text-black-chrome uppercase text-[22px] leading-tight font-semibold overflow-hidden text-overflow tracking-wider'>
+            <a
+              href={repo.html_url}
+              target='_blank'
+              className='py-5 px-10 block'
+            >
+              <h2 className='text-black-chrome dark:text-white-default uppercase text-[22px] leading-tight font-semibold overflow-hidden text-overflow tracking-wider'>
                 {repo.name}
-              </h6>
+              </h2>
               {!isEmpty(repo.description) && (
-                <p className='text-md text-gray-a3'>{repo.description}</p>
+                <p className='text-md text-gray-a3 dark:text-[#a3a3a3]'>
+                  {repo.description}
+                </p>
               )}
             </a>
           </li>
