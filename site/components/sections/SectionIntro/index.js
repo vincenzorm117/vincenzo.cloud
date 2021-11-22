@@ -16,7 +16,10 @@ const SectionIntro = ({}) => (
           my experiences and experiments with the world.
         </p>
         <div>
-          <a className='button--outline' href='mailto:vincenzorm117@gmail.com'>
+          <a
+            className='inline-block px-[26px] py-[1px] leading-[33px] uppercase tracking-[2px] text-center text-[#cecece] bg-transparent font-semibold text-[14px] border-solid border-[#cecece] border-2 hover:bg-[#cecece] hover:text-[#1c1c1c]'
+            href='mailto:vincenzorm117@gmail.com'
+          >
             Contact Me
           </a>
         </div>
