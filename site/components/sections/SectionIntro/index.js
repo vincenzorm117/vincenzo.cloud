@@ -1,11 +1,11 @@
 const SectionIntro = ({}) => (
-  <section className='bg-gray-darkest text-white-dark'>
+  <section className='text-gray-darkest bg-white-dark dark:bg-gray-darkest dark:text-white-dark'>
     <div className='flex flex-nowrap flex-row justify-center mx-auto container py-28'>
       <div className='w-4/12'>
         <img
           src='/img/profile.jpg'
           alt='Profile Picture'
-          className='rounded-full overflow-hidden border-white-darker border-4 border-solid w-8/12 mx-auto'
+          className='rounded-full overflow-hidden border-gray-darkest dark:border-white-darker border-4 border-solid w-8/12 mx-auto'
         />
       </div>
       <div className='flex flex-col justify-center w-8/12'>
@@ -17,7 +17,7 @@ const SectionIntro = ({}) => (
         </p>
         <div>
           <a
-            className='inline-block px-[26px] py-[1px] leading-[33px] uppercase tracking-[2px] text-center text-[#cecece] bg-transparent font-semibold text-[14px] border-solid border-[#cecece] border-2 hover:bg-[#cecece] hover:text-[#1c1c1c]'
+            className='inline-block px-[26px] py-[1px] leading-[33px] uppercase tracking-[2px] text-center dark:text-[#cecece] bg-transparent font-semibold text-[14px] border-solid dark:border-[#cecece] border-2 hover:bg-[#1c1c1c] hover:border-[#1c1c1c] hover:text-[#cecece] dark:hover:bg-[#cecece] dark:hover:text-[#1c1c1c]'
             href='mailto:vincenzorm117@gmail.com'
           >
             Contact Me
