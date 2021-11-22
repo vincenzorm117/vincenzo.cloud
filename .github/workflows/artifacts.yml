@@ -4,7 +4,7 @@ name: Artifacts
 
 # Controls when the workflow will run
 on:
- release:
+  release:
     types:
       - created
 
@@ -28,7 +28,11 @@ jobs:
       - name: Npm install
         run: npm ci
         working-directory: ./site
-      
+
+      - name: Pull notion data
+        run: npm run notion:pull
+        working-directory: ./site
+
       - name: Build App
         run: npm run build
         working-directory: ./site
