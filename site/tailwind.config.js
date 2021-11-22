@@ -10,6 +10,7 @@ module.exports = {
       display: ["'Gilroy Light'", 'Helvetica', 'sans-serif']
     },
     colors: {
+      currentColor: 'currentColor',
       transparent: 'transparent',
       white: {
         default: '#fff',
