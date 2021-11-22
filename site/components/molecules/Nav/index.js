@@ -10,7 +10,8 @@ const links = [
   { text: 'Home', href: '/' },
   { text: 'Experience', href: '/experience' },
   { text: 'Projects', href: '/projects' },
-  { text: 'Repos/Gists', href: '/repos' }
+  { text: 'Repos/Gists', href: '/repos' },
+  { text: 'Blog', href: '/blog' }
 ]
 
 const Nav = ({}) => {
