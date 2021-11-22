@@ -5,13 +5,35 @@ import SectionFooter from 'components/sections/SectionFooter'
 import Nav from 'components/molecules/Nav'
 import GlobalProvider from '../providers/GlobalProvider'
 import Mask from 'components/atoms/Mask'
-import { useState } from 'react'
+import { useEffect, useReducer, useState } from 'react'
+
+const darkModeReducer = (state, action) => {
+  if (typeof action?.isDark === 'boolean') {
+    const { isDark } = action
+    if (isDark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    return { isDark }
+  } else {
+    throw new Error('Invalid value for darkModeReducer')
+  }
+}
 
 export default function MyApp({ Component, pageProps }) {
   const maskHook = useState(false)
+  const darkModeHook = useReducer(darkModeReducer, { isDark: false })
+
+  useEffect(() => {
+    const [, dispatch] = darkModeHook
+    dispatch({
+      isDark: window.matchMedia('(prefers-color-scheme: dark)').matches
+    })
+  }, [])
 
   return (
-    <GlobalProvider.Provider value={{ maskHook }}>
+    <GlobalProvider.Provider value={{ maskHook, darkModeHook }}>
       <Head>
         <meta charSet='utf-8' />
         <meta name='description' content="Vincenzo Marconi's Personal Site" />

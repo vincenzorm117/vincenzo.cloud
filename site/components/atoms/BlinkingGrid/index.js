@@ -2,10 +2,13 @@ import { useEffect, useRef } from 'react'
 import { clamp } from 'lodash'
 import flipcoin from 'helpers/flipcoin'
 
-const GRID_DOT_DIAMETER = 2
-const GRID_GUTTER = 40
-
-const BlinkingGrid = ({ children = null }) => {
+const BlinkingGrid = ({
+  children = null,
+  colorDot = '#fff',
+  bgColor = '#181818',
+  gridDotDiameter = 2,
+  gridGutterSize = 40
+}) => {
   const canvasRef = useRef(null)
   const canvasDimensions = useRef({ width: 0, height: 0 })
   const gridInfo = useRef({ xCount: 0, yCount: 0, nodeCount: 0 })
@@ -23,7 +26,7 @@ const BlinkingGrid = ({ children = null }) => {
     const { blinkingNodes, canvasDimensions, gridInfo } = args
     const { clientWidth, clientHeight } = ctx.canvas
     const { width, height } = canvasDimensions.current
-    const space = GRID_GUTTER + GRID_DOT_DIAMETER
+    const space = gridGutterSize + gridDotDiameter
 
     if (clientWidth !== width || clientHeight !== height) {
       // Update dimensions
@@ -53,8 +56,8 @@ const BlinkingGrid = ({ children = null }) => {
             ctx.globalAlpha = 0.2
           }
           ctx.beginPath()
-          ctx.rect(x * space, y * space, GRID_DOT_DIAMETER, GRID_DOT_DIAMETER)
-          ctx.fillStyle = '#fff'
+          ctx.rect(x * space, y * space, gridDotDiameter, gridDotDiameter)
+          ctx.fillStyle = colorDot
           ctx.fill()
         }
       }
@@ -77,9 +80,9 @@ const BlinkingGrid = ({ children = null }) => {
         const y = blinkingNode.y * space
 
         ctx.beginPath()
-        ctx.clearRect(x, y, GRID_DOT_DIAMETER, GRID_DOT_DIAMETER)
-        ctx.rect(x, y, GRID_DOT_DIAMETER, GRID_DOT_DIAMETER)
-        ctx.fillStyle = '#fff'
+        ctx.clearRect(x, y, gridDotDiameter, gridDotDiameter)
+        ctx.rect(x, y, gridDotDiameter, gridDotDiameter)
+        ctx.fillStyle = colorDot
         ctx.fill()
       }
     }
@@ -149,7 +152,7 @@ const BlinkingGrid = ({ children = null }) => {
   ])
 
   return (
-    <div className='bg-[#181818]'>
+    <div style={{ background: bgColor }}>
       {children}
       <canvas className='w-full h-[80vh]' ref={canvasRef} />
     </div>
