@@ -86,7 +86,7 @@ const BlockGetAllChildren = async (res, notion) => {
   for await (const res of db.results) {
     cache.add(res)
 
-    if (res.object !== 'page') {
+    if (res.object !== 'page' || res?.properties?.Publish?.checkbox !== true) {
       continue
     }
 
