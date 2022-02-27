@@ -3,27 +3,40 @@ import path from 'path'
 import NotionText from '@/components/notion-components/NotionText'
 
 export default function Page({ pages, blocks }) {
+  const pagesArray = Object.values(pages)
+
+  for (const page of pagesArray) {
+    page.local.last_edited = new Date(page.last_edited_time)
+  }
+
   return (
-    <article
-      className='pt-16 sm:pt-24 pb-32 dark:bg-purple-dark dark:text-white-default min-h-full'
-      style={{ minHeight: 'calc(100vh - 137px)' }}
-    >
+    <article className='pt-16 sm:pt-24 pb-32 dark:bg-purple-dark dark:text-white-default min-h-full flex-1 w-full'>
       <h1 className='text-center pb-20 text-5xl'>Blog</h1>
-      <div className='flex flex-wrap max-w-3xl mx-auto px-10'>
-        {Object.values(pages).map((page) => (
-          <a
-            href={`/blog/${page.slug}/`}
-            key={page.id}
-            className='block text-center w-full md:w-1/2'
-          >
-            {page?.local?.cover?.localUrl && (
-              <img src={page.local.cover.localUrl} className='rounded-3xl' />
-            )}
-            <h2 className='text-2xl mt-3'>
-              <NotionText field={page.properties.Name.title} />
-            </h2>
-          </a>
-        ))}
+      <div className='flex justify-center'>
+        <ul className='inline-flex flex-col max-w-6xl mx-auto px-10'>
+          {pagesArray.map((page) => (
+            <li key={page.id} className='mb-10'>
+              <h2>
+                <a
+                  href={`/blog/${page.slug}/`}
+                  className='block w-full text-3xl'
+                >
+                  <NotionText field={page.properties.Name.title} />
+                </a>
+              </h2>
+              <time
+                dateTime={page.last_edited_time.replace(/T.*$/, '')}
+                className='text-gray-a3'
+              >
+                {page.local.last_edited.toLocaleDateString('en-US', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric'
+                })}
+              </time>
+            </li>
+          ))}
+        </ul>
       </div>
     </article>
   )
