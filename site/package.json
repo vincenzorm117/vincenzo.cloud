@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && next export",
     "start": "next start",
-    "notion:pull": "node ./bin/notionPullPages.js"
+    "notion:pull": "node ./bin/notionPullPages.js",
+    "env:load": "export $(cat ../.env | xargs)"
   },
   "dependencies": {
     "classnames": "^2.3.1",
