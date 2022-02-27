@@ -67,7 +67,7 @@ const NotionComponent = ({ block }) => {
       return NotionCode(block)
     default:
       return (
-        <div className='p-4 bg-purple-dark text-white-default'>
+        <div className='p-4 bg-purple-dark dark:bg-[#2e2e2e]'>
           <h2>Unknown Block</h2>
           {block.id} <br />
           {block.type}
