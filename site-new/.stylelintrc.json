@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "declaration-block-trailing-semicolon": null,
+    "no-descending-specificity": null,
+    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": null,
+    "alpha-value-notation": null,
+    "color-function-notation": null
+  }
+}
