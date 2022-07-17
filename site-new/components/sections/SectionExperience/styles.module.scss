@@ -1,0 +1,17 @@
+@import '../../../styles/mixins';
+
+@include colorMixerSpec(hsl(249, 18%, 49%), fun-color, 20, color);
+
+.link {
+  color: hsl(249deg, 18%, 49%);
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation-name: fun-color;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}

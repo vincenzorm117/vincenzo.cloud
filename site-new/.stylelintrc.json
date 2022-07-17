@@ -9,6 +9,7 @@
     "color-function-notation": null,
     "string-quotes": "single",
     "scss/dollar-variable-pattern": null,
-    "scss/at-mixin-pattern": "^[a-z][a-zA-Z0-9]+$"
+    "scss/at-mixin-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "scss/at-extend-no-missing-placeholder": null
   }
 }

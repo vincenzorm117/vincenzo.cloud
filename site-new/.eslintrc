@@ -48,12 +48,7 @@
       }
     ],
     "no-return-assign": ["error", "except-parens"],
-    "no-restricted-syntax": [
-      "error",
-      "ForInStatement",
-      "LabeledStatement",
-      "WithStatement"
-    ],
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"],
     "no-shadow": [
       "error",
       {
@@ -145,7 +140,13 @@
     "react/react-in-jsx-scope": "off",
     "react/require-default-props": "off",
     "react-hooks/exhaustive-deps": "off",
-    "react-hooks/rules-of-hooks": "error"
+    "react-hooks/rules-of-hooks": "error",
+    "@next/next/no-img-element": "off",
+    "react/destructuring-assignment": 0,
+    "jsx-a11y/control-has-associated-label": 1,
+    "react/no-danger": 1,
+    "import/no-cycle": 1,
+    "no-prototype-builtins": 1
   },
   "ignorePatterns": ["node_modules/*", "/components/core/Vendor/*"],
   "overrides": [

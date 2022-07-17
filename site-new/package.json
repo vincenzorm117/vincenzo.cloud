@@ -17,20 +17,23 @@
     "build-storybook": "build-storybook"
   },
   "lint-staged": {
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write"
+    ],
     "*.{css,scss}": [
       "stylelint"
     ],
     "*.{js,ts,tsx}": [
       "eslint --fix"
-    ],
-    "*.{json,js,ts,jsx,tsx,html}": [
-      "prettier --write"
     ]
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "next": "12.2.2",
+    "prop-types": "^15.8.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
