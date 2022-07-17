@@ -10,7 +10,7 @@
     "style-lint": "stylelint components/**/*.scss pages/**/*.scss **/*.scss",
     "prettier": "prettier -w ./pages ./styles",
     "pre-commit": "lint-staged",
-    "install-git-hooks": "echo 'echo test; (cd site-new && npm run pre-commit)' > ../.git/hooks/pre-commit"
+    "install-git-hooks": "echo '(cd site-new && npm run pre-commit)' > ../.git/hooks/pre-commit"
   },
   "dependencies": {
     "next": "12.2.2",
