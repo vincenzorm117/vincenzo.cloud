@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint .",
     "style-lint": "stylelint components/**/*.scss pages/**/*.scss **/*.scss",
-    "prettier": "prettier -w ./pages ./styles"
+    "prettier": "prettier -w ./pages ./styles",
+    "pre-commit": "lint-staged",
+    "install-git-hooks": "echo 'npm run pre-commit' > ../.git/hooks/pre-commit"
   },
   "dependencies": {
     "next": "12.2.2",
