@@ -10,7 +10,8 @@
     "style-lint": "stylelint components/**/*.scss pages/**/*.scss **/*.scss",
     "prettier": "prettier -w ./pages ./styles",
     "pre-commit": "lint-staged",
-    "install-git-hooks": "echo '(cd site-new && npm run pre-commit)' > ../.git/hooks/pre-commit"
+    "install-git-hooks": "cp .husky/* ../.git/hooks",
+    "install-husky": "cd .. && husky install site-new/.husky"
   },
   "dependencies": {
     "next": "12.2.2",
@@ -27,6 +28,7 @@
     "eslint-plugin-jest-dom": "^4.0.2",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-testing-library": "^5.5.1",
+    "husky": "^8.0.1",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.6"
   }
