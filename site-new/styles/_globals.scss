@@ -1,0 +1,13 @@
+// Reset
+@forward 'reset';
+
+// Tailwind
+@forward '~tailwindcss/base';
+@forward '~tailwindcss/components';
+@forward '~tailwindcss/utilities';
+
+// Structure
+@forward 'presets';
+@forward 'fonts';
+@forward 'main';
+@forward 'notion';
