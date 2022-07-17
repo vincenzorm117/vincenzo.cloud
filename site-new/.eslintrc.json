@@ -37,7 +37,7 @@
     "consistent-return": "off",
     "func-names": "off",
     "import": "off",
-    "jsx-quotes": ["error", "prefer-double"],
+    "jsx-quotes": ["error", "prefer-single"],
     "max-len": "off",
     "no-await-in-loop": "off",
     "no-console": "off",
@@ -83,7 +83,7 @@
     ],
     "quotes": [
       "error",
-      "double",
+      "single",
       {
         "avoidEscape": true,
         "allowTemplateLiterals": true
@@ -113,7 +113,7 @@
     "prettier/prettier": [
       "error",
       {
-        "doubleQuote": true,
+        "singleQuote": true,
         "endOfLine": "lf",
         "jsxDoubleQuote": true,
         "printWidth": 80,
