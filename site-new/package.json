@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "stylelint": "stylelint",
     "style-lint": "stylelint components/**/*.scss pages/**/*.scss **/*.scss",
     "next-lint": "next lint",
     "prettier": "prettier -w .",
@@ -42,6 +43,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.14",
+    "stylelint-config-standard-scss": "^5.0.0",
     "tailwindcss": "^3.1.6"
   }
 }

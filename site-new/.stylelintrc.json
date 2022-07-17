@@ -1,12 +1,14 @@
 {
   "extends": "stylelint-config-standard-scss",
-  "plugins": ["stylelint-order"],
+  "plugins": [],
   "rules": {
     "declaration-block-trailing-semicolon": null,
     "no-descending-specificity": null,
-    "order/properties-alphabetical-order": true,
     "selector-class-pattern": null,
     "alpha-value-notation": null,
-    "color-function-notation": null
+    "color-function-notation": null,
+    "string-quotes": "single",
+    "scss/dollar-variable-pattern": null,
+    "scss/at-mixin-pattern": "^[a-z][a-zA-Z0-9]+$"
   }
 }
