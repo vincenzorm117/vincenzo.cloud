@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Developing",
+    "projects": [
+      {
+        "dates": "Jun. 2017 - Present",
+        "title": "Node.js CMS",
+        "body": [
+          "Currently designing a modular Content Management System inspired by Wordpress's architecture."
+        ],
+        "tags": ["Node.js", "ES6", "HTML5", "CSS3"]
+      },
+      {
+        "dates": "Present",
+        "title": "TimeUp",
+        "body": [
+          "Developing a web application that helps track what movies you've watched using OmDb's Movie database."
+        ],
+        "tags": [
+          "JavaScript ES6",
+          "Angular 7",
+          "Node.js",
+          "MongoDB",
+          "OmDb API",
+          "GraphQL",
+          "Redis",
+          "Heroku",
+          "HTML5",
+          "CSS3"
+        ]
+      },
+      {
+        "dates": "Present",
+        "title": "Troals",
+        "body": [
+          "Every monday, a close friend and I review 3 goals that we have for our week. We determine wether we accomplished, completed or made some progress on the goal. We've been doing this for some time and now I am developing an application to maintain and augment this data. We have noticed trends in the challenges of goal completion, and one of the things we want to examine in this data is what affects our's and possibly other's abilities in completing goals."
+        ],
+        "tags": [
+          "JavaScript ES6",
+          "Angular 5",
+          "Node.js",
+          "Firebase",
+          "HTML5",
+          "CSS3"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Maintaining",
+    "projects": [
+      {
+        "dates": "Jun. 2017 - Present",
+        "title": "romolo.io",
+        "body": [
+          "Developed this site as a blog and a hub for my information.",
+          "Developed REST API and admin panel that manages site data.",
+          "Plan to setup API's that pull data from online REST API's to track health and financial data."
+        ],
+        "tags": [
+          "Angular 6",
+          "Node.js",
+          "MongoDB",
+          "ES6",
+          "GitHub API",
+          "Redis",
+          "HTML5",
+          "CSS3"
+        ]
+      },
+      {
+        "dates": "Jan. 2013 - May 2014",
+        "title": "Trigonometry and Fractions Worksheet Generator",
+        "body": [
+          "Developed two <a class='text-red-pink' href='https://github.com/vincenzorm117/math_quiz_generator' target='_blank'>C++ programs</a> programs that respectively generate a trig or fraction worksheet/quiz.",
+          "The programs generate Latex documents that can be converted to PDF."
+        ],
+        "tags": ["C++", "Latex"]
+      }
+    ]
+  }
+]

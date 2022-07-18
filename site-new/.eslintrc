@@ -146,7 +146,8 @@
     "jsx-a11y/control-has-associated-label": 1,
     "react/no-danger": 1,
     "import/no-cycle": 1,
-    "no-prototype-builtins": 1
+    "no-prototype-builtins": 0,
+    "no-continue": 0
   },
   "ignorePatterns": ["node_modules/*", "/components/core/Vendor/*"],
   "overrides": [
