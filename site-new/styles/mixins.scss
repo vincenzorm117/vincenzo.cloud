@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 @mixin colorMixerSpec($color, $name, $res, $property) {
   $colorHue: color.hue($color);
   $colorSaturation: color.saturation($color);
