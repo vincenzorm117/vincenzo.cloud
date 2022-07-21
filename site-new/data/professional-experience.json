@@ -1,6 +1,6 @@
 [
   {
-    "dates": "Sep. 2018 - Present",
+    "dates": "Sep 2018 – Jan 2020",
     "title": "Alaso USA Inc. Contracting",
     "body": [
       "Developing and testing full stack applications and systems to automate and optimize warehouse operations ranging from utilities as printing labels to measuring production output per machine and warehouse employee."
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "dates": "Feb. 2018 - Present",
+    "dates": "Feb 2018 – Dec 2020",
     "title": "FCFMN Construction Tracking Contracting",
     "body": [
       "Built a full stack web application to track construction sites for the construction contractors of the FCFMN organization.",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "dates": "Jul. 2016 - Oct. 2018",
+    "dates": "Jul 2016 – Oct 2018",
     "title": "TheLeadLion Contracting/Consulting",
     "body": [
       "Aided in the development of a lead engine using Node.js on AWS using Lambda functions, SQS, SNS and EC2 instances to process and control the flow of leads."
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "dates": "Aug. 2016 - Jul. 2018",
+    "dates": "Aug 2016 – Jul 2018",
     "title": "Studio Birdsall LLC Employment",
     "body": [
       "Managed and developed fully custom dynamic web solutions and applications for eCommerce and corporate clients on Wordpress, Magento, and Shopify.",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "dates": "Jul. 2016 - Jul. 2017",
+    "dates": "Jul 2016 – Jul 2017",
     "title": "MyMailbox GPG2 Inc. Contracting",
     "body": [
       "Designed and developed all of the software for a physical smart mailbox notification system that works with Particle’s IOT micro-controller cloud systems, delivering notifications through Twilio with Node.js.",
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "dates": "Mar. 2015 - Aug. 2016",
+    "dates": "Mar 2015 – Aug 2016",
     "title": "BrandCo LLC Employment",
     "body": [
       "Built a full stack Email Tracking System called Cue supported on Chrome, Firefox, Outlook and iOS with a small development team that reported directly to employer. For more information see <a class='text-red-pink' href='https://cue.io/' rel=noreferrer>cue.io</a>.",

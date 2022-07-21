@@ -1,6 +1,6 @@
 [
   {
-    "dates": "Jan. 2015 - Jun. 2015",
+    "dates": "Jan 2015 – Jun 2015",
     "title": "Research in Machine Learning Verification",
     "body": [
       "Investigated verification of the K-Means algorithm using Microsoft's z3 Theorem Prover."
@@ -8,7 +8,7 @@
     "tags": ["C++", "z3"]
   },
   {
-    "dates": "Aug. 2014 - Dec. 2015",
+    "dates": "Aug 2014 – Dec 2015",
     "title": "Systems Software Teacher’s Assistant",
     "body": [
       "Tutored compiler and OS concepts and built an auto grader that decreased grading time by 50%."
@@ -16,7 +16,7 @@
     "tags": ["C", "Bash", "CLI Tools"]
   },
   {
-    "dates": "Jan. 2013 - May 2014",
+    "dates": "Jan 2013 – May 2014",
     "title": "UCF Math Lab Tutor",
     "body": [
       "Tutored over 100 students in Matrix and Linear Algebra, Discrete Mathematics with proofs, Single and Multivariable Calculus, Ordinary Differential Equations, and Trigonometry."
@@ -24,7 +24,7 @@
     "tags": []
   },
   {
-    "dates": "May 2013 - Aug. 2013",
+    "dates": "May 2013 – Aug 2013",
     "title": "Disney Professional Internship",
     "body": [
       "Developed a booking metrics application that increased metric gathering and rendering by over 100%."
@@ -41,7 +41,7 @@
     ]
   },
   {
-    "dates": "Jan. 2013 - Apr. 2013",
+    "dates": "Jan 2013 – Apr 2013",
     "title": "Object Oriented Programming Peer Tutor",
     "body": [
       "Tutored over 30 students in Object Oriented Programming with Java."
