@@ -15,10 +15,10 @@ const SectionExperience = ({ className = '' }) => (
       <a
         className={cn(styles.link, 'mx-[24px]')}
         href='/resume/VincenzoMarconi-Resume.pdf'>
-        <IconLink className='inline-block fill-current' /> PDF
+        <IconLink className='inline-block fill-currentColor' /> PDF
       </a>
       <a className={styles.link} href='/resume/VincenzoMarconi-Resume.docx'>
-        <IconLink className='inline-block fill-current' /> DocX
+        <IconLink className='inline-block fill-currentColor' /> DocX
       </a>
     </p>
     <div className='max-w-4xl mx-auto'>
