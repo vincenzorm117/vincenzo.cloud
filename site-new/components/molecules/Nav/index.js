@@ -1,9 +1,9 @@
+import { IconMoon, IconSun } from '@components/atoms/Icon'
 import cn from 'classnames'
 import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import { useGlobalContext } from 'providers/GlobalProvider'
 import { useCallback, useEffect, useState } from 'react'
-import { IconMoon, IconSun } from '@/components/atoms/Icon'
 import styles from './styles.module.scss'
 
 const links = [

@@ -1,6 +1,6 @@
+import NotionText from '@components/notion-components/NotionText'
 import { promises as fs } from 'fs'
 import path from 'path'
-import NotionText from '@/components/notion-components/NotionText'
 
 const Page = ({ pages, blocks }) => {
   const pagesArray = Object.values(pages)

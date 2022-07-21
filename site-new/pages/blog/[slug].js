@@ -1,6 +1,6 @@
+import NotionPage from '@components/notion-components/NotionPage'
 import { promises as fs } from 'fs'
 import path from 'path'
-import NotionPage from '@/components/notion-components/NotionPage'
 
 const Page = ({ page, blocks }) => <NotionPage page={page} blocks={blocks} />
 

@@ -1,5 +1,5 @@
-import SectionGists from '@/components/sections/SectionGists'
-import SectionRepos from '@/components/sections/SectionRepos'
+import SectionGists from '@components/sections/SectionGists'
+import SectionRepos from '@components/sections/SectionRepos'
 
 const Page = () => (
   <>

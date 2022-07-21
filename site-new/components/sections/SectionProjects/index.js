@@ -1,7 +1,7 @@
-import { Fragment } from 'react'
+import PortfolioItem from '@components/molecules/PortfolioItem'
+import projectData from '@data/projects.json'
 import cn from 'classnames'
-import PortfolioItem from '@/components/molecules/PortfolioItem'
-import projectData from '@/data/projects.json'
+import { Fragment } from 'react'
 
 const SectionProjects = ({ className = '' }) => (
   <section

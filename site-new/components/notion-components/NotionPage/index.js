@@ -1,5 +1,5 @@
+import NotionComponent from '@components/notion-components'
 import { useMemo } from 'react'
-import NotionComponent from '@/components/notion-components'
 import NotionProvider from '../../../providers/NotionProvider'
 import NotionTag from '../NotionTag'
 import NotionText from '../NotionText'

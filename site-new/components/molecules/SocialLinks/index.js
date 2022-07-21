@@ -1,4 +1,4 @@
-import { IconEnvelope } from '@/components/atoms/Icon'
+import { IconEnvelope } from '@components/atoms/Icon'
 
 const SocialLinks = () => (
   <>

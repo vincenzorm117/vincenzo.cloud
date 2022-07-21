@@ -1,5 +1,5 @@
+import BlinkingGrid from '@components/atoms/BlinkingGrid'
 import { useGlobalContext } from 'providers/GlobalProvider'
-import BlinkingGrid from '@/components/atoms/BlinkingGrid'
 
 const SectionHomeHero = () => {
   const { darkModeHook } = useGlobalContext()

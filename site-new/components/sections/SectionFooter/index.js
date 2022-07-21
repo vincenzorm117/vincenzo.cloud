@@ -1,6 +1,6 @@
+import { IconMoon, IconSun } from '@components/atoms/Icon'
 import SocialLinks from 'components/molecules/SocialLinks'
 import { useGlobalContext } from 'providers/GlobalProvider'
-import { IconMoon, IconSun } from '@/components/atoms/Icon'
 
 const SectionFooter = () => {
   const { darkModeHook } = useGlobalContext()
