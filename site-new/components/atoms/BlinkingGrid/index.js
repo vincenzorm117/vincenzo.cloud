@@ -79,7 +79,7 @@ const BlinkingGrid = ({
       // Draw background
 
       // Draw each node
-      for (const [blinkingNode, i] of Object.entries(blinkingNodes.current)) {
+      for (const [i, blinkingNode] of Object.entries(blinkingNodes.current)) {
         if (blinkingNode.isDoneBlinking) {
           ctx.globalAlpha = 0.2
           delete blinkingNodes.current[i]
