@@ -1,5 +1,5 @@
 const SectionIntro = () => (
-  <section className='text-gray-darkest bg-white-dark dark:bg-gray-darkest dark:text-white-dark'>
+  <section className='text-gray-darkest bg-white-default dark:bg-gray-darkest dark:text-white-dark relative'>
     <div className='sm:flex flex-nowrap sm:flex-row justify-center mx-auto container py-14 sm:py-28'>
       <div className='sm:w-4/12'>
         <img

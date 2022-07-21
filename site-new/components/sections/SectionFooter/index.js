@@ -7,7 +7,7 @@ const SectionFooter = () => {
   const [{ isDark }, dispatch] = darkModeHook
 
   return (
-    <footer className='bg-[#b6995e14] dark:bg-purple-darkest dark:text-white-default text-purple-darkest bg-white-default pb-4'>
+    <footer className='bg-[#b6995e14] dark:bg-purple-darkest dark:text-white-default text-purple-darkest  pb-4'>
       <div className='container mx-auto'>
         <div className='pt-10 pb-20 sm:pb-16 flex justify-center'>
           <SocialLinks />
