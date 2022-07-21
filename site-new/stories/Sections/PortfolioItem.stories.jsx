@@ -1,7 +1,7 @@
-import SectionEducation from '../../components/sections/SectionEducation'
+import SectionEducation from '@components/sections/SectionEducation'
 
 export default {
-  title: 'Sections/SectionEducation',
+  title: 'sections/SectionEducation',
   component: SectionEducation,
 }
 

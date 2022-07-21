@@ -23,9 +23,9 @@ module.exports = {
     // @ Symbol Aliasesb
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@img/': path.resolve(__dirname, '../public/img/'),
-      '@components/': path.resolve(__dirname, '../components/'),
-      '@data/': path.resolve(__dirname, '../data/'),
+      '@img': path.resolve(__dirname, '../public/img'),
+      '@components': path.resolve(__dirname, '../components'),
+      '@data': path.resolve(__dirname, '../data'),
     }
 
     config.module.rules.push({
