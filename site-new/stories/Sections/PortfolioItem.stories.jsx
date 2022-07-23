@@ -1,4 +1,4 @@
-import SectionEducation from '@components/sections/SectionEducation'
+import SectionEducation from '@components/organisms/SectionEducation'
 
 export default {
   title: 'sections/SectionEducation',

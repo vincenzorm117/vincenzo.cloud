@@ -1,6 +1,6 @@
+import SectionFooter from '@components/organisms/SectionFooter'
 import Mask from 'components/atoms/Mask'
 import Nav from 'components/molecules/Nav'
-import SectionFooter from 'components/sections/SectionFooter'
 import Head from 'next/head'
 import { useEffect, useMemo, useReducer, useState } from 'react'
 // import 'tailwindcss/tailwind.css'

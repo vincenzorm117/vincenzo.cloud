@@ -1,6 +1,6 @@
-import SectionHomeHero from '@components/sections/SectionHomeHero'
-import SectionSocial from 'components/sections/SectionSocial'
-import SectionIntro from '../components/sections/SectionIntro'
+import SectionHomeHero from '@components/organisms/SectionHomeHero'
+import SectionSocial from '@components/organisms/SectionSocial'
+import SectionIntro from '../components/organisms/SectionIntro'
 
 const Home = () => (
   <>

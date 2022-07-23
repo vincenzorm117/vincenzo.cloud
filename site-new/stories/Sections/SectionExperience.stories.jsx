@@ -1,4 +1,4 @@
-import SectionExperience from '@components/sections/SectionExperience'
+import SectionExperience from '@components/organisms/SectionExperience'
 
 export default {
   title: 'sections/SectionExperience',

@@ -1,4 +1,4 @@
-import SectionProjects from '@components/sections/SectionProjects'
+import SectionProjects from '@components/organisms/SectionProjects'
 
 const Page = () => <SectionProjects className='pt-16 sm:pt-24' />
 
