@@ -1,0 +1,282 @@
+[
+  {
+    "dates": {
+      "start": "Jan 2019",
+      "end": "Present"
+    },
+    "title": "RedVentures",
+    "type": "Employment",
+    "body2": [],
+    "tags": [
+      ".NET Core",
+      "C#",
+      "React",
+      "Vue",
+      "NextJS",
+      "ESlint",
+      "Stylelint",
+      "Storybook",
+      "Jest",
+      "GraphQL",
+      "MySQL",
+      "Git",
+      "HTML",
+      "CSS",
+      "SCSS",
+      "AWS",
+      "Terraform",
+      "Atlantis",
+      "Webpack",
+      "Bash",
+      "CLI Tools",
+      "Docker",
+      "Docker Compose",
+      "Node.js",
+      "Golang",
+      "EJS",
+      "Hexo CMS",
+      "JSON",
+      "Material UI",
+      "Figma",
+      "JavaScript",
+      "CRUD",
+      "REST",
+      "Agile",
+      "Jira",
+      "SOC Audit",
+      "RedShift",
+      "ECS",
+      "Lambda",
+      "ELB",
+      "Route53",
+      "IAM",
+      "VPC",
+      "S3",
+      "CloudFront",
+      "CloudWatch",
+      "SSL",
+      "CircleCI",
+      "Github Actions",
+      "Mocha",
+      "Chai",
+      "Applitools",
+      "Slack Webhooks",
+      "Chrome Extension",
+      "Auth0",
+      "JWT",
+      "JFrog Artifactory",
+      "Env",
+      "New Relic",
+      "Splunk"
+    ]
+  },
+  {
+    "dates": {
+      "start": "Sep 2018",
+      "end": "Jan 2020"
+    },
+    "title": "Alaso USA",
+    "type": "Contracting",
+    "body": [
+      "Developing and testing full stack applications and systems to automate and optimize warehouse operations ranging from utilities as printing labels to measuring production output per machine and warehouse employee."
+    ],
+    "body2": [
+      "Developed and maintained {C#}/{.Net 4.7} and {Windows Forms} applications to automate, optimize and track warehouse operations.",
+      "Developed and maintained a web ({HTML}/{CSS}/{JavaScript}) dashboard powered by a {C#}/{.Net Core 2} server with {GraphQL}, and using {React}, {webpack}, and {Sass} on the frontend."
+    ],
+    "tags": [
+      ".NET 4.7",
+      "C#",
+      "React",
+      "GraphQL",
+      "MS-SQL",
+      "Windows Forms",
+      "Windows Universal",
+      "ASP.Net Core",
+      "LINQ",
+      "Crystal Reports",
+      "NuGet Packages",
+      "iOT",
+      "Git",
+      "HTML5",
+      "CSS3"
+    ]
+  },
+  {
+    "dates": {
+      "start": "Feb 2018",
+      "end": "Dec 2020"
+    },
+    "title": "FCFMN",
+    "type": "Contracting",
+    "body": [
+      "Built a full stack web application to track construction sites for the construction contractors of the FCFMN organization.",
+      "Building spreadsheet data management UI component to do bulk editing."
+    ],
+    "body2": [
+      "Built, managed, and added features to a full stack web application using a {MEAN} ({MongoDB}, {ExpressJS}, {Angular 2+}, and {Node.js}) architecture to track construction site for the contruction contractors working with the FCFMN organization."
+    ],
+    "tags": [
+      "Node.js",
+      "MongoDB",
+      "Angular 2+",
+      "ES6",
+      "WebSockets",
+      "Google Cloud Services",
+      "Firebase",
+      "Redis",
+      "DigitalOcean",
+      "Nginx",
+      "HTML5",
+      "CSS3"
+    ]
+  },
+  {
+    "dates": {
+      "start": "Jul 2016",
+      "end": "Oct 2018"
+    },
+    "title": "TheLeadLion",
+    "type": "Contracting",
+    "body": [
+      "Aided in the development of a lead engine using Node.js on AWS using Lambda functions, SQS, SNS and EC2 instances to process and control the flow of leads."
+    ],
+    "body2": [
+      "Aided in the development of a lead engine using {Node.js} on {AWS} using {Lambda} functions, {SQS}, {SNS} and {EC2} instances to process and control the flow of leads."
+    ],
+    "tags": [
+      "JavaScript ES6",
+      "Node.js",
+      "HTML5",
+      "AWS",
+      "SASS/LESS/CSS3",
+      "WordPress",
+      "React",
+      "Git",
+      "Twilio"
+    ]
+  },
+  {
+    "dates": {
+      "start": "Aug 2016",
+      "end": "Jul 2018"
+    },
+    "title": "Studio Birdsall LLC",
+    "type": "Employment",
+    "body": [
+      "Managed and developed fully custom dynamic web solutions and applications for eCommerce and corporate clients on Wordpress, Magento, and Shopify.",
+      "Built site crawler that takes full screen snapshots of each page and stores diffs of new and old snapshots to identify changes site wide.",
+      "Notable projects include: <u>nacrewatches.com</u>, <u>hivelocity.com</u>, <u>calepino.fr</u>, <u>makr.com</u>, <u>indigoandcotton.com</u>, <u>chaptex.com</u>, <u>zpropertiesinc.com</u> and <u>armatureworks.com</u>."
+    ],
+    "body2": [
+      "Managed and developed fully custom dynamic web solutions and applications for eCommerce and corporate clients on {Wordpress}, {Magento}, and {Shopify}.",
+      "Built site crawler using {Node.js} that takes full screen snapshots of each page and stores diffs of new and old snapshots to identify changes site wide.",
+      "Notable projects include: <u>nacrewatches.com</u>, <u>hivelocity.com</u>, <u>calepino.fr</u>, <u>makr.com</u>, <u>indigoandcotton.com</u>, <u>chaptex.com</u>, <u>zpropertiesinc.com</u> and <u>armatureworks.com</u>."
+    ],
+    "tags": [
+      "HTML5",
+      "SASS/LESS/CSS3",
+      "JavaScript ES6",
+      "PHP",
+      "WordPress",
+      "jQuery",
+      "Magento",
+      "Shopify",
+      "Git",
+      "Python",
+      "Gulp",
+      "Bash",
+      "CLI Tools"
+    ]
+  },
+  {
+    "dates": {
+      "start": "Jul 2016",
+      "end": "Jul 2017"
+    },
+    "title": "MyMailbox GPG2 Inc.",
+    "type": "Contracting",
+    "body": [
+      "Designed and developed all of the software for a physical smart mailbox notification system that works with Particle’s IOT micro-controller cloud systems, delivering notifications through Twilio with Node.js.",
+      "Developed Alexa Application that reports information from the MyMailbox servers using Node.js and the Alexa Skills Kit."
+    ],
+    "body2": [
+      "Developed and maintained physical smart mailbox software using {Particle}'s cloud connected IoT micro-controller powered by {C++} like language.",
+      "Developed and maintained full stack web server that connected to the physical smart mailbox using a {Node.js}, {EJS}, {PostgreSQL}, {Heroku}, {Twilio} architecture with a {Vanilla} frontend.",
+      "Developed an {Alexa} based {AWS} {Lambda} function that connects to the physical smart mailbox through the full stack server to check for physical mail and other information."
+    ],
+    "tags": [
+      "C++",
+      "Node.js",
+      "JavaScript",
+      "WebSockets",
+      "PostgreSQL",
+      "EJS",
+      "HTTP/1.1",
+      "JSON",
+      "REST",
+      "CRUD",
+      "SASS/CSS3",
+      "Materialize",
+      "HTML5",
+      "Heroku",
+      "Twilio",
+      "IoT",
+      "Vanilla"
+    ]
+  },
+  {
+    "dates": {
+      "start": "Mar 2015",
+      "end": "Aug 2016"
+    },
+    "title": "BrandCo Employment",
+    "type": "Employment",
+    "body": [
+      "Built a full stack Email Tracking System called <a href='https://cue.io/' rel='noreferrer'>Cue</a> supported on Chrome, Firefox, Outlook and iOS with a small development team that reported directly to employer. For more information see <a class='text-red-pink' href='https://cue.io/' rel=noreferrer>cue.io</a>.",
+      "Developed a Client Review System that monitored and distributed client satisfaction per client-employee interaction."
+    ],
+    "body2": [
+      "Built a full stack Email Tracking System called <a class='text-red-pink' href='https://cue.io/' rel='noreferrer'>Cue</a> on a small team composed of:",
+      [
+        "A {Chrome Extension} and {FireFox Extension} supporting the following email providers: Gmail, MSN, Office365, TopProducer, Aol and Yahoo; using {HTML}, {CSS}, and {JavaScript}."
+      ],
+      [
+        "An {iOS} Application built on {XCode} with {Swift}.",
+        "An {Outlook Add-in}.",
+        "A {Symfony Framework} server with {PostgreSQL}."
+      ],
+      "Developed a Client-Employee Review System that monitored and distributed client satisfaction per client-employee interaction using {WordPress}, {MySQL}, and {PHP}.",
+      "Developed and maintained 100+ cookie cutter websites using {HTML}, {SCSS}/{CSS}, and {JavaScript}; supporting modern and legacy browsers at the time including {Legacy Internet Explorer} (IE7-IE11)."
+    ],
+    "tags": [
+      "HTML",
+      "SCSS",
+      "CSS",
+      "JavaScript",
+      "Chrome Extension",
+      "Firefox Extension",
+      "C#",
+      "Outlook Add-in",
+      "WebSockets",
+      "Redis",
+      "HTTP/1.1",
+      "SSL",
+      "jQuery",
+      "PHP",
+      "WordPress",
+      "MySQL",
+      "PostgreSQL",
+      "Symfony Framework",
+      "Node.js",
+      "Heroku",
+      "Swift",
+      "iOS",
+      "Gulp",
+      "Grunt",
+      "Bash",
+      "CLI Tools",
+      "Xcode"
+    ]
+  }
+]
