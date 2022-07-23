@@ -1,13 +1,5 @@
-import SectionHomeHero from '@/components/sections/SectionHomeHero'
-import SectionSocial from 'components/sections/SectionSocial'
-import SectionIntro from '../components/sections/SectionIntro'
+import TemplateHomeV1 from '@components/templates/homeV1'
 
-export default function Home() {
-  return (
-    <>
-      <SectionHomeHero />
-      <SectionSocial />
-      <SectionIntro />
-    </>
-  )
-}
+const Home = () => <TemplateHomeV1 />
+
+export default Home

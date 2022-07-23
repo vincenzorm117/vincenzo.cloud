@@ -1,10 +1,10 @@
+import NotionPage from '@components/notion-components/NotionPage'
 import { promises as fs } from 'fs'
 import path from 'path'
-import NotionPage from '@/components/notion-components/NotionPage'
 
-export default function Page({ page, blocks }) {
-  return <NotionPage page={page} blocks={blocks} />
-}
+const Page = ({ page, blocks }) => <NotionPage page={page} blocks={blocks} />
+
+export default Page
 
 export async function getStaticPaths() {
   const pages = JSON.parse(
@@ -17,9 +17,9 @@ export async function getStaticPaths() {
 
   return {
     paths: Object.values(pages).map((p) => ({
-      params: { slug: p.slug }
+      params: { slug: p.slug },
     })),
-    fallback: false
+    fallback: false,
   }
 }
 
@@ -45,7 +45,7 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       page,
       pages,
-      blocks
-    }
+      blocks,
+    },
   }
 }

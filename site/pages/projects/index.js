@@ -1,9 +1,5 @@
-import SectionProjects from '@/components/sections/SectionProjects'
+import TemplateProjectV1 from '@components/templates/projectsV1'
 
-export default function Page() {
-  return (
-    <>
-      <SectionProjects className='pt-16 sm:pt-24' />
-    </>
-  )
-}
+const Page = () => <TemplateProjectV1 />
+
+export default Page

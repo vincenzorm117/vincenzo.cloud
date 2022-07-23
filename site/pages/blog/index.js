@@ -1,8 +1,8 @@
+import NotionText from '@components/notion-components/NotionText'
 import { promises as fs } from 'fs'
 import path from 'path'
-import NotionText from '@/components/notion-components/NotionText'
 
-export default function Page({ pages, blocks }) {
+const Page = ({ pages, blocks }) => {
   const pagesArray = Object.values(pages)
 
   for (const page of pagesArray) {
@@ -19,19 +19,17 @@ export default function Page({ pages, blocks }) {
               <h2>
                 <a
                   href={`/blog/${page.slug}/`}
-                  className='block w-full text-3xl'
-                >
+                  className='block w-full text-3xl'>
                   <NotionText field={page.properties.Name.title} />
                 </a>
               </h2>
               <time
                 dateTime={page.last_edited_time.replace(/T.*$/, '')}
-                className='text-gray-a3'
-              >
+                className='text-gray-a3'>
                 {page.local.last_edited.toLocaleDateString('en-US', {
                   day: 'numeric',
                   month: 'long',
-                  year: 'numeric'
+                  year: 'numeric',
                 })}
               </time>
             </li>
@@ -41,6 +39,8 @@ export default function Page({ pages, blocks }) {
     </article>
   )
 }
+
+export default Page
 
 export async function getStaticProps(context) {
   const blocks = JSON.parse(
@@ -59,7 +59,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       pages,
-      blocks
-    }
+      blocks,
+    },
   }
 }

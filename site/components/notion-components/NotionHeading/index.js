@@ -1,7 +1,7 @@
 import {
   NOTION_TYPE_HEADING_1,
   NOTION_TYPE_HEADING_2,
-  NOTION_TYPE_HEADING_3
+  NOTION_TYPE_HEADING_3,
 } from 'utils/notion'
 import NotionText from '../NotionText'
 
@@ -17,6 +17,8 @@ const NotionHeading = (block) => {
       return <h2 className='text-4xl mt-5 mb-2'>{str}</h2>
     case NOTION_TYPE_HEADING_1:
       return <h1 className='text-5xl mt-5 mb-2'>{str}</h1>
+    default:
+      return null
   }
 }
 

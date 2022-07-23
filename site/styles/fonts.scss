@@ -1,15 +1,16 @@
 @font-face {
-  font-family: "Gilroy Light";
-  src: url("/fonts/gilroy-334AE8_0_0.eot");
-  src: url("/fonts/gilroy-334AE8_0_0.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/gilroy-334AE8_0_0.woff2") format("woff2"),
-    url("/fonts/gilroy-334AE8_0_0.woff") format("woff"),
-    url("/fonts/gilroy-334AE8_0_0.ttf") format("truetype");
+  font-family: 'Gilroy Light';
+  src: url('../public/fonts/gilroy-334AE8_0_0.eot');
+  src: url('../public/fonts/gilroy-334AE8_0_0.eot?#iefix')
+      format('embedded-opentype'),
+    url('../public/fonts/gilroy-334AE8_0_0.woff2') format('woff2'),
+    url('../public/fonts/gilroy-334AE8_0_0.woff') format('woff'),
+    url('../public/fonts/gilroy-334AE8_0_0.ttf') format('truetype');
 }
 
 body,
 p {
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: Roboto, Helvetica, sans-serif;
   font-weight: 400;
 }
 
@@ -19,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Gilroy Light", Helvetica, sans-serif;
+  font-family: 'Gilroy Light', Helvetica, sans-serif;
 }
 
 code,
@@ -28,7 +29,7 @@ code,
 }
 
 :root {
-  --font-title: "Gilroy Light", Helvetica, sans-serif;
-  --font-default: "Roboto", Helvetica, sans-serif;
+  --font-title: 'Gilroy Light', helvetica, sans-serif;
+  --font-default: 'Roboto', helvetica, sans-serif;
   --font-mono: monospace;
 }

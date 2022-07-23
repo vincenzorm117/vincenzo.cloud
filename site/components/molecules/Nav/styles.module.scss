@@ -7,8 +7,8 @@
   transform: translate(-50%, -50%);
   cursor: pointer;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     position: absolute;
     left: 0;
@@ -19,23 +19,26 @@
     transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
-  &:before {
+  &::before {
     transform-origin: top left;
     top: 0;
   }
-  &:after {
+
+  &::after {
     transform-origin: bottom left;
     bottom: 0;
   }
 }
 
 .burgerActive {
+  // stylelint-ignore-next-line
   @extend .burger;
 
-  &:before {
+  &::before {
     transform: translate(4px, -4px) rotate(45deg) translateZ(0);
   }
-  &:after {
+
+  &::after {
     transform: translate(4px, 4px) rotate(-45deg) translateZ(0);
   }
 }

@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react'
-import { clamp } from 'lodash'
 import flipcoin from 'helpers/flipcoin'
+import { clamp } from 'lodash'
+import { useEffect, useRef } from 'react'
+/* eslint-disable no-shadow */
 
 const BlinkingGrid = ({
   children = null,
@@ -8,7 +9,7 @@ const BlinkingGrid = ({
   bgColor = '#181818',
   gridDotDiameter = 2,
   gridGutterSize = 40,
-  isDark = false
+  isDark = false,
 }) => {
   const canvasRef = useRef(null)
   const canvasDimensions = useRef({ width: 0, height: 0 })
@@ -58,9 +59,9 @@ const BlinkingGrid = ({
       ctx.clearRect(0, 0, clientWidth, clientHeight)
 
       // Draw each node
-      for (let x = 0; x < xCount; x++) {
-        for (let y = 0; y < yCount; y++) {
-          let index = x * yCount + y
+      for (let x = 0; x < xCount; x += 1) {
+        for (let y = 0; y < yCount; y += 1) {
+          const index = x * yCount + y
           if (blinkingNodes.current.hasOwnProperty(index)) {
             ctx.globalAlpha = blinkingNodes.current[index].alpha
           } else {
@@ -78,9 +79,7 @@ const BlinkingGrid = ({
       // Draw background
 
       // Draw each node
-      for (let i in blinkingNodes.current) {
-        const blinkingNode = blinkingNodes.current[i]
-
+      for (const [i, blinkingNode] of Object.entries(blinkingNodes.current)) {
         if (blinkingNode.isDoneBlinking) {
           ctx.globalAlpha = 0.2
           delete blinkingNodes.current[i]
@@ -105,17 +104,15 @@ const BlinkingGrid = ({
     // Update currently active blinking dots
     for (const node of Object.values(blinkingNodes.current)) {
       // Calculate alpha value for node
-      var t = (Date.now() - node.blinkStartTime.getTime()) / 1000
-      var alpha =
-        (2 * 0.6) /
-          (Math.pow(Math.E, 3 * (t - 2)) + Math.pow(Math.E, 3 * (2 - t))) +
-        0.2
+      const t = (Date.now() - node.blinkStartTime.getTime()) / 1000
+      const alpha =
+        (2 * 0.6) / (Math.E ** (3 * (t - 2)) + Math.E ** (3 * (2 - t))) + 0.2
 
       // Set node alpha for drawing
       node.alpha = clamp(alpha, 0.2, 0.8)
 
       // Mark node for deletion
-      blinkingNodes.current[node.index].isDoneBlinking = 6.0 < t
+      blinkingNodes.current[node.index].isDoneBlinking = t > 6.0
     }
 
     // Add new blinking dots
@@ -129,7 +126,7 @@ const BlinkingGrid = ({
         alpha: 0.2,
         isDoneBlinking: false,
         x: Math.floor(index / gridInfo.current.yCount),
-        y: index % gridInfo.current.yCount
+        y: index % gridInfo.current.yCount,
       }
     }
   }
@@ -141,7 +138,7 @@ const BlinkingGrid = ({
     const args = {
       blinkingNodes,
       canvasDimensions,
-      gridInfo
+      gridInfo,
     }
 
     const render = () => {
@@ -159,7 +156,7 @@ const BlinkingGrid = ({
     draw,
     blinkingNodes.current,
     canvasDimensions.current,
-    gridInfo.current
+    gridInfo.current,
   ])
 
   return (
@@ -171,3 +168,5 @@ const BlinkingGrid = ({
 }
 
 export default BlinkingGrid
+
+/* eslint-enable no-shadow */

@@ -3,7 +3,7 @@ const https = require('https')
 const fs = require('fs')
 const path = require('path')
 const { Client } = require('@notionhq/client')
-const uuidv4 = require('uuid').v4
+const uuidv4 = require('uuid').v4 // eslint-disable-line import/no-extraneous-dependencies
 
 const NOTION_TYPE_BULLETED_LIST_ITEM = 'bulleted_list_item'
 const NOTION_TYPE_NUMBERED_LIST_ITEM = 'numbered_list_item'
@@ -11,8 +11,6 @@ const NOTION_TYPE_IMAGE = 'image'
 
 class Cache {
   db = {}
-
-  constructor() {}
 
   add(obj) {
     if (!this.db.hasOwnProperty(obj.id)) {
@@ -36,17 +34,17 @@ const DownloadImage = async (url) =>
     )
 
     const file = fs.createWriteStream(localFilePath)
-    const request = get(url, (response) => {
+    get(url, (response) => {
       response.pipe(file)
       file.on('finish', () => {
         file.close(() => {
           resolve({
             localFileName,
-            localUrl: `/blog/${localFileName}`
+            localUrl: `/blog/${localFileName}`,
           })
         })
       })
-    }).on('error', function (err) {
+    }).on('error', (err) => {
       fs.unlink(localFilePath)
       reject(err)
     })
@@ -55,7 +53,7 @@ const DownloadImage = async (url) =>
 const BlockGetAllChildren = async (res, notion) => {
   const response = await notion.blocks.children.list({
     block_id: res.id,
-    page_size: 100
+    page_size: 100,
   })
 
   let curr = response
@@ -63,7 +61,7 @@ const BlockGetAllChildren = async (res, notion) => {
     curr = await notion.blocks.children.list({
       block_id: res.id,
       page_size: 100,
-      start_cursor: curr.next_cursor
+      start_cursor: curr.next_cursor,
     })
 
     response.results = response.results.concat(curr.results)
@@ -80,7 +78,7 @@ const BlockGetAllChildren = async (res, notion) => {
   const notion = new Client({ auth: process.env.NOTION_KEY })
 
   const db = await notion.databases.query({
-    database_id: process.env.NOTION_DATABASE_ID
+    database_id: process.env.NOTION_DATABASE_ID,
   })
 
   for await (const res of db.results) {
@@ -142,7 +140,7 @@ const BlockGetAllChildren = async (res, notion) => {
     }
 
     // [Step] Group lists
-    for (let i = 0; i < page.blocks.length; i++) {
+    for (let i = 0; i < page.blocks.length; i += 1) {
       const currBlock = page.blocks[i]
 
       // Skip block if not part of a list
@@ -160,10 +158,10 @@ const BlockGetAllChildren = async (res, notion) => {
         object: 'block',
         type: listTypeKey,
         id: uuidv4(),
-        [listTypeKey]: []
+        [listTypeKey]: [],
       }
 
-      for (let j = i; j < page.blocks.length; j++) {
+      for (let j = i; j < page.blocks.length; j += 1) {
         if (page.blocks[j].type === listType) {
           bulletItemBlock[listTypeKey].push(page.blocks[j])
         } else {

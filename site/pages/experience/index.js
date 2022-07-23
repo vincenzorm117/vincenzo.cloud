@@ -1,13 +1,5 @@
-import SectionEducation from '@/components/sections/SectionEducation'
-import SectionExperience from '@/components/sections/SectionExperience'
-import SectionUniversityExperience from '@/components/sections/SectionUniversityExperience'
+import TemplateExperienceV1 from '@components/templates/experienceV1'
 
-export default function Page() {
-  return (
-    <>
-      <SectionExperience className='pt-16 sm:pt-24' />
-      <SectionEducation />
-      <SectionUniversityExperience />
-    </>
-  )
-}
+const Page = () => <TemplateExperienceV1 />
+
+export default Page

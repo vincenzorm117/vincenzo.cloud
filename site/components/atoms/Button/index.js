@@ -6,15 +6,15 @@ const TYPE_LINK = 'link'
 const Button = ({ type = TYPE_BUTTON, children = null }) => {
   if (type === 'link') return <a>{children}</a>
 
-  return <button>{children}</button>
+  return <button type='button'>{children}</button>
 }
 
 Button.propTypes = {
-  type: PropTypes.oneOf([TYPE_BUTTON, TYPE_LINK])
+  type: PropTypes.oneOf([TYPE_BUTTON, TYPE_LINK]),
 }
 
 Button.defaultProps = {
-  type: TYPE_BUTTON
+  type: TYPE_BUTTON,
 }
 
 export default Button

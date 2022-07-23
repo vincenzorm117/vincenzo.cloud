@@ -1,11 +1,5 @@
-import SectionGists from '@/components/sections/SectionGists'
-import SectionRepos from '@/components/sections/SectionRepos'
+import TemplateReposV1 from '@components/templates/reposV1'
 
-export default function Page() {
-  return (
-    <>
-      <SectionRepos className='pt-16 sm:pt-24' />
-      <SectionGists className='pt-2 sm:pt-10' />
-    </>
-  )
-}
+const Page = () => <TemplateReposV1 />
+
+export default Page

@@ -3,7 +3,7 @@
     "title": "Developing",
     "projects": [
       {
-        "dates": "Jun. 2017 - Present",
+        "dates": "Jun 2017 – Present",
         "title": "Node.js CMS",
         "body": [
           "Currently designing a modular Content Management System inspired by Wordpress's architecture."
@@ -50,7 +50,7 @@
     "title": "Maintaining",
     "projects": [
       {
-        "dates": "Jun. 2017 - Present",
+        "dates": "Jun. 2017 – Present",
         "title": "romolo.io",
         "body": [
           "Developed this site as a blog and a hub for my information.",
@@ -69,7 +69,7 @@
         ]
       },
       {
-        "dates": "Jan. 2013 - May 2014",
+        "dates": "Jan 2013 – May 2014",
         "title": "Trigonometry and Fractions Worksheet Generator",
         "body": [
           "Developed two <a class='text-red-pink' href='https://github.com/vincenzorm117/math_quiz_generator' target='_blank'>C++ programs</a> programs that respectively generate a trig or fraction worksheet/quiz.",

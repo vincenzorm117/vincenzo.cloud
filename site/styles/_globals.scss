@@ -1,9 +1,13 @@
-// @tailwind base;
-// @tailwind components;
-// @tailwind utilities;
+// Reset
+@forward 'reset';
 
-@import './reset.scss';
-@import './presets.scss';
-@import './fonts.scss';
-@import './main.scss';
-@import './notion.scss';
+// Tailwind
+@forward '~tailwindcss/base';
+@forward '~tailwindcss/components';
+@forward '~tailwindcss/utilities';
+
+// Structure
+@forward 'presets';
+@forward 'fonts';
+@forward 'main';
+@forward 'notion';

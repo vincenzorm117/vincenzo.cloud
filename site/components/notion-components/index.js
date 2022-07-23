@@ -1,6 +1,4 @@
-import { useNotionContext } from 'providers/NotionProvider'
 import {
-  NOTION_TYPE_BREADCRUMB,
   NOTION_TYPE_BULLETED_LIST,
   NOTION_TYPE_CALLOUT,
   NOTION_TYPE_CODE,
@@ -16,7 +14,7 @@ import {
   NOTION_TYPE_SYNCED_BLOCK,
   NOTION_TYPE_TOGGLE,
   NOTION_TYPE_TO_DO,
-  NOTION_TYPE_VIDEO
+  NOTION_TYPE_VIDEO,
 } from 'utils/notion'
 import NotionBulletedList from './NotionBulletedList'
 import NotionCallout from './NotionCallout'

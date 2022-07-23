@@ -1,7 +1,7 @@
 import strNewLineToHtml from 'helpers/strNewLineToHtml'
 
-const NotionText = ({ field }) => {
-  return field
+const NotionText = ({ field }) =>
+  field
     ?.filter((s) => ['text', 'mention'].includes(s.type))
     .map((s, index) => {
       // Get list of CSS classes
@@ -25,7 +25,7 @@ const NotionText = ({ field }) => {
               className={classes.join(' ')}
               href={s.href}
               dangerouslySetInnerHTML={{
-                __html: strNewLineToHtml(s.plain_text)
+                __html: strNewLineToHtml(s.plain_text),
               }}
             />
           )
@@ -38,7 +38,7 @@ const NotionText = ({ field }) => {
                 key={index}
                 className={classes.concat('underline').join(' ')}
                 dangerouslySetInnerHTML={{
-                  __html: strNewLineToHtml(s.text.content)
+                  __html: strNewLineToHtml(s.text.content),
                 }}
               />
             )
@@ -48,12 +48,11 @@ const NotionText = ({ field }) => {
               key={index}
               className={classes.join(' ')}
               dangerouslySetInnerHTML={{
-                __html: strNewLineToHtml(s.text.content)
+                __html: strNewLineToHtml(s.text.content),
               }}
             />
           )
       }
     })
-}
 
 export default NotionText

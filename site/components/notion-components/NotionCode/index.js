@@ -1,8 +1,8 @@
 import { useGlobalContext } from 'providers/GlobalProvider'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import {
+  solarizedDark,
   solarizedLight,
-  solarizedDark
 } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 const NotionCode = (block) => {
@@ -16,9 +16,8 @@ const NotionCode = (block) => {
       <SyntaxHighlighter
         language={block.code.language}
         style={isDark ? solarizedDark : solarizedLight}
-        showLineNumbers={true}
-        wrapLines={true}
-      >
+        showLineNumbers
+        wrapLines>
         {codeText}
       </SyntaxHighlighter>
     </div>

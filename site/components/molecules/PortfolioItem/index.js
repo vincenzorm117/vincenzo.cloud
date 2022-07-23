@@ -1,4 +1,4 @@
-import Tag from '@/components/atoms/Tag'
+import Tag from '@components/atoms/Tag'
 
 const PortfolioItem = ({ data = {}, className = '' }) => {
   const { dates, title, body, tags } = data
