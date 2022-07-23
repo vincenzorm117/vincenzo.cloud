@@ -1,5 +1,5 @@
-import SectionProjects from '@components/organisms/SectionProjects'
+import TemplateProjectV1 from '@components/templates/projectsV1'
 
-const Page = () => <SectionProjects className='pt-16 sm:pt-24' />
+const Page = () => <TemplateProjectV1 />
 
 export default Page
