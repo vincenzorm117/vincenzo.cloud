@@ -24,19 +24,19 @@ const ItemList = ({ list, allTags, depth }) => {
       </ul>
     )
   }
-  return list.split(/(\{[^}]+\})/).map((x) => {
+  return list.split(/(\{[^}]+\})/).map((x, index) => {
     if (x[0] === '{' && x[x.length - 1] === '}') {
       const tech = x.replace(/(^\{|\}$)/g, '')
       allTags.add(tech)
       return (
         <b
-          key={tech}
+          key={index}
           className='dark:text-green-light text-green-dark whitespace-nowrap'>
           {tech}
         </b>
       )
     }
-    return <span key={x} dangerouslySetInnerHTML={{ __html: x }} />
+    return <span key={index} dangerouslySetInnerHTML={{ __html: x }} />
   })
 }
 

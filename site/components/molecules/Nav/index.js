@@ -52,10 +52,9 @@ const Nav = () => {
         {links.map((link) => (
           <li
             className='text-[20px] py-2 uppercase font-display font-bold text-white-ce tracking-widest'
-            key={link.text}>
-            <Link href={link.href} onClick={() => toggleNav(false)}>
-              {link.text}
-            </Link>
+            key={link.text}
+            onClickCapture={() => toggleNav(false)}>
+            <Link href={link.href}>{link.text}</Link>
           </li>
         ))}
       </ul>
