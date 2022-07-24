@@ -1,5 +1,5 @@
-import { useGlobalContext } from 'providers/GlobalProvider'
 import cn from 'classnames'
+import { useGlobalContext } from 'providers/GlobalProvider'
 
 const Mask = () => {
   const { maskHook } = useGlobalContext()

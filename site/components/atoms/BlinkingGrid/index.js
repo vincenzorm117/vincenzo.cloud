@@ -1,6 +1,7 @@
 import flipcoin from 'helpers/flipcoin'
 import { clamp } from 'lodash'
 import { useEffect, useRef } from 'react'
+
 /* eslint-disable no-shadow */
 
 const BlinkingGrid = ({

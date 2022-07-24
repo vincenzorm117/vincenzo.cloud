@@ -4,6 +4,7 @@ import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import { useGlobalContext } from 'providers/GlobalProvider'
 import { useCallback, useEffect, useState } from 'react'
+
 import styles from './styles.module.scss'
 
 const links = [

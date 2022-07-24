@@ -1,6 +1,7 @@
 import { IconRightArrow } from '@components/atoms/Icon'
 import cn from 'classnames'
 import { useState } from 'react'
+
 import NotionComponent from '..'
 import NotionText from '../NotionText'
 

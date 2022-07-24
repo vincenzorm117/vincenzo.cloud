@@ -3,6 +3,7 @@ import {
   NOTION_TYPE_HEADING_2,
   NOTION_TYPE_HEADING_3,
 } from 'utils/notion'
+
 import NotionText from '../NotionText'
 
 const NotionHeading = (block) => {

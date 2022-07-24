@@ -2,6 +2,7 @@ import { IconLink } from '@components/atoms/Icon'
 import PortfolioItemInline from '@components/molecules/PortfolioItemInline'
 import proExperiences from '@data/professional-experience-inline.json'
 import cn from 'classnames'
+
 import styles from './styles.module.scss'
 
 const SectionExperienceInline = ({ className = '' }) => (

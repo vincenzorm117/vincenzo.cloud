@@ -1,5 +1,5 @@
 import { IconMoon, IconSun } from '@components/atoms/Icon'
-import SocialLinks from 'components/molecules/SocialLinks'
+import SocialLinks from '@components/molecules/SocialLinks'
 import { useGlobalContext } from 'providers/GlobalProvider'
 
 const SectionFooter = () => {

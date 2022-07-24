@@ -16,6 +16,7 @@ import {
   NOTION_TYPE_TO_DO,
   NOTION_TYPE_VIDEO,
 } from 'utils/notion'
+
 import NotionBulletedList from './NotionBulletedList'
 import NotionCallout from './NotionCallout'
 import NotionCode from './NotionCode'
