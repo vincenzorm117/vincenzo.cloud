@@ -1,5 +1,5 @@
-import TemplateExperienceV1 from '@components/templates/experienceV1'
+import TemplateExperienceV2 from '@components/templates/experienceV2'
 
-const Page = () => <TemplateExperienceV1 />
+const Page = () => <TemplateExperienceV2 />
 
 export default Page
