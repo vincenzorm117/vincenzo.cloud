@@ -6,7 +6,20 @@
     },
     "title": "RedVentures",
     "type": "Employment",
-    "body2": [],
+    "roles": ["Engineer", "Senior Engineer", "Staff Engineeer"],
+    "body2": [
+      "Developed and maintained our Backend {API}s and {Jobs} powered by {Golang}, {Dotnet}, {Node.js}, {Terraform}, {Docker}, on an {AWS} {ECS}/{Lambda}, and other {AWS} technologies.",
+      "Maintained and developed partner marketing web sites that generated significnat revenue, using {Custom} proprietary technology powered by {HTML}, {SCSS}, {JavaScript}, {Hexo CMS}, {React}, {Vue}, and {Docker}, on an {AWS} {S3}/{CloudFront}/{Lambda@Edge} architecture.",
+      "Led the tech migration from our {Custom} proprietary technology over to {NextJS}.",
+      "Led the content migration from our site's code base ({JSON} files) into propreitary {CMS} to standardize content in a {Schema}/{Model} and delegate content management to our QA team. This sped up our workflow drastically and improved our Developer/QA experience.",
+      "Non-Technical/Cultural",
+      [
+        "Managed under-staffed team during COVID (2020)",
+        "Participated in several {interviews} for Associate, Mid, Senior, and Manager Enginering roles.",
+        "Was involved in multiple strategic staffing and career development initiatives/discussions.",
+        "Worked closely with business on {Product Management}-esq strategic direction of technologies we wanted to acquire along with the {Agile}/{Logistical} {Project Management} execution to get there."
+      ]
+    ],
     "tags": [
       ".NET Core",
       "C#",
@@ -67,7 +80,8 @@
       "JFrog Artifactory",
       "Env",
       "New Relic",
-      "Splunk"
+      "Splunk",
+      "LINQ"
     ]
   },
   {
